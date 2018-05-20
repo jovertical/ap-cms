@@ -1,0 +1,16 @@
+.bred {
+    border: 1px solid red;
+}
+
+.m-nav__link.m-nav__link--active:hover {
+	cursor: default;
+	text-decoration: none;
+}
+
+/* Summernote hide image upload option */
+.note-group-select-from-files {
+    display: none;
+}
+
+.w-67 { width: 67%; }
+.w-33 { width: 33%; }
