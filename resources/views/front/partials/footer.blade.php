@@ -18,7 +18,7 @@
                                     <h4>EMAIL FOR NEWSLETTER</h4>
                                 </div>
                                 <div class="newsletter-subtext">
-                                    For more information and updates please subscribe to our 
+                                    For more information and updates please subscribe to our
                                     newsletter to receive emails from {{ $app['name'] }} automatically.
                                 </div>
                                 <div class="footer-newsletter-content">
@@ -64,10 +64,10 @@
                                 </div>
                             </div>
                             <div class="footer-block02 aboutus-links col-ms-4 col-md-4">
-                                
+
                                 <div class="fi-useful-content">
                                     <ul class="fi-left col-sm-6">
-                                       
+
                                         <li>
                                             <a href="/pages/contact"><span>Privacy policy</span></a>
                                         </li>
@@ -153,6 +153,41 @@
         </div>
     </section>
 </footer>
+
+<div id="newsletter-popup" class="modal fade" style="display: none;" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="nl-wraper-popup bounceInDown" style="background-image: url(/front/cdn.shopify.com/s/files/1/1286/1471/t/2/assets/mailing_bg.png?17231127553059638277)">
+        <div class="nl-wraper-popup-inner">
+            <form method="POST" action="{{ route(user_env().'.subscribe') }}">
+                @csrf
+
+                <h4>EMAIL FOR NEWSLETTER</h4>
+                <p>
+                    For more information and updates please subscribe to our
+                    newsletter to receive emails from {{ $app['name'] }} automatically.
+                </p>
+                <div class="group_input">
+                    <input type="email" name="email" id="email" class="form-control" value="{{ old('email') }}"
+                        placeholder="Enter your email address">
+
+                    <button class="btn" type="submit">
+                        <i class="fa fa-paper-plane" data-toggle="tooltip" data-placement="top" title="Submit"></i>
+                    </button>
+                </div>
+            </form>
+
+            <div id="popup-hide">
+                <input type="checkbox" id="mc-popup-hide" value="0" onclick="checkcookie()">
+                <label for="mc-popup-hide">Don't show this popup again</label>
+            </div>
+
+            <div class="nl-popup-close">
+                <span onclick="$('#newsletter-popup').modal('hide')" data-toggle="tooltip" data-placement="top" title="Close">
+                    <i class="fa fa-times"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Float right icon -->
 <div class="float-right-icon">
