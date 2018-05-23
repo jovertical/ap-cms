@@ -30,8 +30,9 @@
       <div class="row">
         <div class="page-inner">
           <div id="page">
-            <div class="details">              
-              To place a purchase for single product, select an AuraRich Distributor in your area. For larger orders, Be an AuraRich Distributor [link to Sell AuraRich page] and order product directly from AuraRich at discount rates! 
+            <div class="details">    
+             <p>{!! $app['distributors'] !!} </p>          
+              
             </div>
           </div>
         </div>

@@ -16,7 +16,7 @@ class Setting implements SettingInterface
 	public function app($key = null)
 	{
 		$keys = [
-			'name', 'about', 'address', 'email', 'phone_number_1', 'phone_number_2',
+			'name', 'about','deals','distributors', 'address', 'email', 'phone_number_1', 'phone_number_2',
 			'facebook_url', 'twitter_url', 'instagram_url', 'youtube_url',
 		];
 

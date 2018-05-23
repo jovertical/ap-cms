@@ -136,9 +136,7 @@
                     <div class="row">
                         <div class="home_topbanner_inner">
     
-                             <div class="col-sm-4">
-                                <div class="group_banner">
-                                   <div class="home_topbanner_image">
+                            <div class="col-sm-4">
                                 @foreach ($categories as $index => $category)
                                 <div class="group_banner">
                                     <div class="home_topbanner_image">
@@ -153,8 +151,7 @@
                                 </div>
                                 @endforeach
                             </div>
-                        </div>
-                    </div>
+    
                         </div>
                     </div>
                 </div>

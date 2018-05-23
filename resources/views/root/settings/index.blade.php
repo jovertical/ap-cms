@@ -90,6 +90,50 @@
                         </div>
                         <!--/. About -->
 
+                         <!-- deals -->
+                        <div class="form-group m-form__group row {{ $errors->has('deals') ? 'has-danger' : '' }}">
+                            <label for="deals" class="col-lg-2 col-form-label">
+                                deals
+                            </label>
+
+                            <div class="col-lg-6">
+                                <textarea name="deals" id="deals" class="summernote {{ $errors->has('about') ?
+                                    ' form-control-danger' :'' }}">{!! old('deals') ?? $settings['app']['deals'] !!}
+                                </textarea>
+
+                                @if ($errors->has('deals'))
+                                    <div id="deals-error" class="form-control-feedback">
+                                        <span class="m--font-danger">{{ $errors->first('deals') }}</span>
+                                    </div>
+                                @endif
+
+                                <span class="m-form__help"></span>
+                            </div>
+                        </div>
+                        <!--/. deals -->
+
+                         <!-- distributors -->
+                        <div class="form-group m-form__group row {{ $errors->has('distributors') ? 'has-danger' : '' }}">
+                            <label for="distributors" class="col-lg-2 col-form-label">
+                                distributors
+                            </label>
+
+                            <div class="col-lg-6">
+                                <textarea name="distributors" id="distributors" class="summernote {{ $errors->has('about') ?
+                                    ' form-control-danger' :'' }}">{!! old('distributors') ?? $settings['app']['distributors'] !!}
+                                </textarea>
+
+                                @if ($errors->has('distributors'))
+                                    <div id="distributors-error" class="form-control-feedback">
+                                        <span class="m--font-danger">{{ $errors->first('distributors') }}</span>
+                                    </div>
+                                @endif
+
+                                <span class="m-form__help"></span>
+                            </div>
+                        </div>
+                        <!--/. deals -->
+
                          <!-- address -->
                         <div class="form-group m-form__group row {{ $errors->has('address') ? 'has-danger' : '' }}">
                             <label for="about" class="col-lg-2 col-form-label">
