@@ -21,7 +21,7 @@ class SettingsTableSeeder extends Seeder
             ['key' => 'distributors', 'value' => 'To place a purchase for single product, select an AuraRich Distributor in your area. For larger orders, Be an AuraRich Distributor [link to Sell AuraRich page] and order product directly from AuraRich at discount rates!'],
             ['key' => 'address', 'value' => 'Philippines'],
             ['key' => 'email', 'value' => 'aurarichphilippines@gmail.com'],
-            ['key' => 'phone_number_1', 'value' => '(+63) 916-3286004'],
+            ['key' => 'phone_number_1', 'value' => '(+63) 905-1142985'],
             ['key' => 'phone_number_2', 'value' => '(+63) 921-8628680'],
             ['key' => 'facebook_url', 'value' => 'https://www.facebook.com/aurarichphilippines'],
             ['key' => 'twitter_url', 'value' => 'https://twitter.com/AuraRichPH'],

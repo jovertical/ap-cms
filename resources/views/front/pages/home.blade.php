@@ -35,20 +35,7 @@
                                 <div class="slide-caption">
                                     <div class="dis_tablecell">
                                         <div class="container">
-                                            <p>
-                                                <span class="title">
-                                                    New collection 2018
-                                                </span>
-                                                <span class="title_bold">Our Products</span>
-                                                <span class="content">The AuraRich product line provides a powerful combination of natural skin
-                                                    whitening and toning power.
-                                                </span>
-                                            </p>
-
-                                            <div class="flex-action not-animated">
-                                                <a class="btn" href="{{ route(user_env().'.products.index') }}">View Products</a>
-                                            </div>
-
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -60,64 +47,44 @@
                                 <div class="slide-caption">
                                     <div class="dis_tablecell">
                                         <div class="container">
-                                            <p>
-                                                <span class="title">
-
-                                                </span>
-                                                <span class="title_bold">AuraRich Tutorials</span>
-                                                <span class="content">Watch the beautiful transformations of our AuraRich users.</span>
-                                            </p>
-
-                                            <div class="flex-action not-animated">
-                                                <a class="btn" href="{{ route(user_env().'.tutorials.index') }}"> Watch Tutorials</a>
-                                            </div>
+                                           
 
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="slideshow-1">
-                            <img src="/front/slide-image-1.jpg">
+                        <li class="slideshow-4">
+                            <img src="/front/slide-image-4.jpg">
                             <div class="caption position-left">
                                 <div class="slide-caption">
                                     <div class="dis_tablecell">
                                         <div class="container">
-                                            <p>
-                                                <span class="title">
-
-                                                </span>
-                                                <span class="title_bold">AuraRich Philippines</span>
-                                                <span class="content"> </span>
-                                            </p>
-
-                                            <div class="flex-action not-animated">
-                                                <a class="btn" href="{{ route(user_env().'.about') }}">About Us</a>
-                                            </div>
-
+                                            
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="slideshow-1">
-                            <img src="/front/slide-image-1.jpg">
+                        <li class="slideshow-5">
+                            <img src="/front/slide-image-5.jpg">
                             <div class="caption position-left">
                                 <div class="slide-caption">
                                     <div class="dis_tablecell">
                                         <div class="container">
-                                            <p>
-                                                <span class="title">
-
-                                                </span>
-                                                <span class="title_bold">AuraRich Philippines</span>
-                                                <span class="content"> </span>
-                                            </p>
-
-                                            <div class="flex-action not-animated">
-                                                <a class="btn" href="{{ route(user_env().'.about') }}">About Us</a>
-                                            </div>
-
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slideshow-6">
+                            <img src="/front/slide-image-6.jpg">
+                            <div class="caption position-left">
+                                <div class="slide-caption">
+                                    <div class="dis_tablecell">
+                                        <div class="container">
+                                           
                                         </div>
                                     </div>
                                 </div>

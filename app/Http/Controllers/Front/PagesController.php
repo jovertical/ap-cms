@@ -126,4 +126,16 @@ class PagesController extends Controller
 
         return view(user_env('pages.reviews'), compact('classes'));
     }
+     public function howitworks()
+    {
+        $classes = [];
+
+        return view(user_env('pages.howitworks'), compact('classes'));
+    }
+     public function distributorpromotion()
+    {
+        $classes = [];
+
+        return view(user_env('pages.distributorpromotion'), compact('classes'));
+    }
 }

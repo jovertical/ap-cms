@@ -24,22 +24,37 @@
                                         <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class=" dropdown li-sub-mega">
-                                            <a href="{{ route(user_env().'.about') }}">
-                                                <span>About Us</span>
-
-                                                <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
-                                                <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
-                                            </a>
-
-                                        </li>
+                                       
                                         <li class=" dropdown li-sub-mega">
                                             <a href="{{ route(user_env().'.getstarted') }}">
-                                                <span>Sell Aura Rich</span>
+                                                <span>Get Started</span>
                                                 <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
                                                 <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                             </a>
+                                        </li>
+                                         <li class=" dropdown li-sub-mega">
+                                            <a href="{{ route(user_env().'.howitworks') }}">
+                                                <span>How it Works</span>
 
+                                                <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                            </a>
+                                        </li>
+                                         <li class=" dropdown li-sub-mega">
+                                            <a href="{{ route(user_env().'.distributorpromotion') }}">
+                                                <span>Distributor Promotion</span>
+
+                                                <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                            </a>
+                                        </li>
+                                         <li class=" dropdown li-sub-mega">
+                                            <a href="{{ route(user_env().'.system') }}">
+                                                <span>Gold Point System</span>
+
+                                                <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                            </a>
                                         </li>
                                     </ul>
                                 </li>
@@ -132,6 +147,8 @@
                             </ul>
                         </div>
 
+                   
+
                         <div class="mobile-top-navigation visible-xs">
                             <button id="showLeftPush" class="visible-xs">
                                 <i class="fa fa-bars fa-2x"></i>
@@ -188,6 +205,7 @@
                                 </li>
                             </ul>
                         </div>
+
                         <div class="is-mobile-nav-menu nav-menu visible-xs" id="is-mobile-nav-menu">
                             <ul class="nav navbar-nav hoverMenuWrapper">
                                 <li class="nav-item dropdown navigation">
@@ -254,4 +272,5 @@
             </div>
         </div>
     </section>
+ <img src="/front/banner.jpg" alt="" style="width: 100%;">
 </header>

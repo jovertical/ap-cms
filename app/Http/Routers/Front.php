@@ -8,6 +8,8 @@ Route::namespace('Front')->name('front.')->group(function () {
     Route::get('/newsletter', 'PagesController@newsletter')->name('newsletter');
     Route::get('/getstarted', 'PagesController@getstarted')->name('getstarted');
     Route::get('/system', 'PagesController@system')->name('system');
+    Route::get('/howitworks', 'PagesController@howitworks')->name('howitworks');
+    Route::get('/distributorpromotion', 'PagesController@distributorpromotion')->name('distributorpromotion');
     Route::get('/deals', 'PagesController@deals')->name('deals');
     Route::get('/news', 'PagesController@news')->name('news');
     Route::get('/distributors', 'PagesController@distributors')->name('distributors');
