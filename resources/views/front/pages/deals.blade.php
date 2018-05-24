@@ -31,8 +31,8 @@
         <div class="page-inner">
           <div id="page">
             <div class="details">              
-              <p>{!! $app['about'] !!} </p>
-          
+              <p>{!! $app['deals'] !!} </p>
+               <center><a href="https://drive.google.com/file/d/1D__8KFLwTtKw9SBrmskb39XinI1EZTB6/view?usp=sharing" title="Brochure"> <button class='btn btn-primary'>Download Brochure</button></a></center>
             </div>
           </div>
         </div>

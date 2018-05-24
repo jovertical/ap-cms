@@ -107,7 +107,11 @@
                                         <i class="">/</i>
                                     </li>
                                     <li>
-                                        <a href="{{ route(user_env().'.contact') }}" title="Contact Us">Contact Us</a>
+                                        <a href="{{ route(user_env().'.getstarted') }}" title="Sell AuraRich">Sell AuraRich</a>
+                                        <i class="">/</i>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route(user_env().'.deals') }}" title="Deals">Deals</a>
                                         <i class="">/</i>
                                     </li>
                                     <li>
@@ -115,13 +119,22 @@
                                         <i class="">/</i>
                                     </li>
                                     <li>
-                                        <a href="{{ route(user_env().'.tutorials.index') }}" title="Tutorials">Tutorials</a>
+                                        <a href="{{ route(user_env().'.news') }}" title="News">News</a>
                                         <i class="">/</i>
                                     </li>
                                     <li>
-                                        <a href="#" title="Distributors">Distributors</a>
+                                        <a href="{{ route(user_env().'.distributors') }}" title="Distributors">Distributors</a>
                                         <i class="">/</i>
                                     </li>
+                                    <li>
+                                        <a href="{{ route(user_env().'.faqs') }}" title="FAQs">FAQs</a>
+                                        <i class="">/</i>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route(user_env().'.tutorials.index') }}" title="Tutorials">Tutorials</a>
+                                        <i class="">/</i>
+                                    </li>
+                                   
                                 </ul>
                             </div>
 
