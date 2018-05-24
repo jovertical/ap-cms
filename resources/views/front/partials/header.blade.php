@@ -50,7 +50,7 @@
                                         </li>
                                          <li class=" dropdown li-sub-mega">
                                             <a href="{{ route(user_env().'.system') }}">
-                                                <span>Gold Point System</span>
+                                                <span>Gold Point Incentive</span>
 
                                                 <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
                                                 <i class="sub-dropdown visible-sm visible-md visible-lg"></i>

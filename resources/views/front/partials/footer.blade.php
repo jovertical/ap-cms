@@ -167,6 +167,7 @@
     </section>
 </footer>
 
+
 <div id="newsletter-popup" class="modal fade" style="display: none;" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="nl-wraper-popup bounceInDown" style="background-image: url(/front/cdn.shopify.com/s/files/1/1286/1471/t/2/assets/mailing_bg.png?17231127553059638277)">
         <div class="nl-wraper-popup-inner">
@@ -211,4 +212,7 @@
             </div>
         </li>
     </ul>
+</div>
+<div class="footer">
+  <p><a href="{{ route(user_env().'.register') }}" title="register"><img src="/front/register5.png"></a></p>
 </div>
