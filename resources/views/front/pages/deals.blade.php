@@ -32,7 +32,7 @@
           <div id="page">
             <div class="details">              
               <p>{!! $app['deals'] !!} </p>
-               <center><a href="https://drive.google.com/file/d/1D__8KFLwTtKw9SBrmskb39XinI1EZTB6/view?usp=sharing" title="Brochure"> <button class='btn btn-primary'>Download Brochure</button></a></center>
+               <center><a href="https://drive.google.com/file/d/1kYu_ILFa1FO79dg8IswOcJSxV6TbzYyu/view?usp=sharing" title="Brochure"> <button class='btn btn-primary'>Download Brochure</button></a></center>
             </div>
           </div>
         </div>
