@@ -17,7 +17,7 @@
                         <div class="navigation_area">
                             <ul class="navigation_links">
                                 <li class="nav-item dropdown navigation">
-                                    <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
+                                    <a href="{{ route(user_env().'.sellaura') }}" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
                                         <span>Sell AuraRich</span>
                                         <i class="fa fa-angle-down"></i>
                                         <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>

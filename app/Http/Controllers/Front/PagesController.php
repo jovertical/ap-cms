@@ -138,4 +138,10 @@ class PagesController extends Controller
 
         return view(user_env('pages.distributorpromotion'), compact('classes'));
     }
+     public function sellaura()
+    {
+        $classes = [];
+
+        return view(user_env('pages.sellaura'), compact('classes'));
+    }
 }

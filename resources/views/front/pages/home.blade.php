@@ -30,7 +30,7 @@
                             </div>
                         </li>
                         <li class="slideshow-2">
-                            <img src="/front/slide-image-2.jpg">
+                            <img src="/front/slide-image-5.jpg">
                             <div class="caption position-right">
                                 <div class="slide-caption">
                                     <div class="dis_tablecell">
@@ -67,7 +67,7 @@
                             </div>
                         </li>
                         <li class="slideshow-5">
-                            <img src="/front/slide-image-5.jpg">
+                            <img src="/front/slide-image-6.jpg">
                             <div class="caption position-left">
                                 <div class="slide-caption">
                                     <div class="dis_tablecell">
@@ -79,7 +79,7 @@
                             </div>
                         </li>
                         <li class="slideshow-6">
-                            <img src="/front/slide-image-6.jpg">
+                            <img src="/front/slide-image-2.jpg">
                             <div class="caption position-left">
                                 <div class="slide-caption">
                                     <div class="dis_tablecell">

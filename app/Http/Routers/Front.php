@@ -5,6 +5,7 @@ Route::namespace('Front')->name('front.')->group(function () {
     Route::get('/about', 'PagesController@about')->name('about');
     Route::get('/contact', 'PagesController@contact')->name('contact');
     Route::get('/faqs', 'PagesController@faqs')->name('faqs');
+    Route::get('/sellaura', 'PagesController@sellaura')->name('sellaura');
     Route::get('/newsletter', 'PagesController@newsletter')->name('newsletter');
     Route::get('/getstarted', 'PagesController@getstarted')->name('getstarted');
     Route::get('/system', 'PagesController@system')->name('system');
