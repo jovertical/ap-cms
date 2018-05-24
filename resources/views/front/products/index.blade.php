@@ -2,7 +2,7 @@
 
 @section('content')
 	@include(user_env().'.partials.breadcrumbs')
-
+<center><a href="https://drive.google.com/file/d/1kYu_ILFa1FO79dg8IswOcJSxV6TbzYyu/view?usp=sharing" title="Brochure"> <button class='btn btn-primary'>Download Brochure</button></a></center>
 	<section class="collection-content">
 		<div class="collection-wrapper">
 			<div class="container">
