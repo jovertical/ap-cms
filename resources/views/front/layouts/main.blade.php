@@ -76,7 +76,7 @@
         <style>
         .header1 {
         width: 100%;
-        height: 40px;
+        height: 30px;
         text-align: center;
         background: black;
         }

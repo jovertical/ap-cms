@@ -31,8 +31,91 @@
         <div class="page-inner">
           <div id="page">
             <div class="details">              
-              <p>{!! $app['about'] !!} </p>
-            
+              
+            <div class="gallery">
+            <a target="_blank" href="/front/reviews/1 (1).jpg">
+            <img src="/front/reviews/1 (1).jpg" alt="Fjords" width="300" height="200">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+
+             <div class="gallery">
+            <a target="_blank" href="/front/reviews/1 (2).jpg">
+            <img src="/front/reviews/1 (2).jpg" alt="Fjords" width="300" height="200">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+
+             <div class="gallery">
+            <a target="_blank" href="/front/reviews/1 (3).jpg">
+            <img src="/front/reviews/1 (3).jpg" alt="Fjords" width="300" height="200">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+
+             <div class="gallery">
+            <a target="_blank" href="/front/reviews/1 (4).jpg">
+            <img src="/front/reviews/1 (4).jpg" alt="Fjords" width="300" height="200">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+
+             <div class="gallery">
+            <a target="_blank" href="/front/reviews/1 (5).jpg">
+            <img src="/front/reviews/1 (5).jpg" alt="Fjords" width="300" height="200">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+
+             <div class="gallery">
+            <a target="_blank" href="/front/reviews/1 (6).jpg">
+            <img src="/front/reviews/1 (6).jpg" alt="Fjords" width="300" height="200">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+
+             <div class="gallery">
+            <a target="_blank" href="/front/reviews/1 (7).jpg">
+            <img src="/front/reviews/1 (7).jpg" alt="Fjords" width="300" height="200">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+
+             <div class="gallery">
+            <a target="_blank" href="/front/reviews/1 (8).jpg">
+            <img src="/front/reviews/1 (8).jpg" alt="Fjords" width="300" height="200">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+
+             <div class="gallery">
+            <a target="_blank" href="/front/reviews/1 (9).jpg">
+            <img src="/front/reviews/1 (9).jpg" alt="Fjords" width="300" height="200">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+
+            <div class="gallery">
+            <a target="_blank" href="/front/reviews/1 (10).jpg">
+            <img src="/front/reviews/1 (10).jpg" alt="Fjords" width="300" height="200">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+
+             <div class="gallery">
+            <a target="_blank" href="/front/reviews/1 (11).jpg">
+            <img src="/front/reviews/1 (11).jpg" alt="Fjords" width="300" height="200">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+
+            <div class="gallery">
+            <a target="_blank" href="/front/reviews/1 (12).jpg">
+            <img src="/front/reviews/1 (12).jpg" alt="Fjords" width="300" height="200">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+
             </div>
           </div>
         </div>
