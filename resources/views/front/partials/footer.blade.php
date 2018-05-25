@@ -71,6 +71,9 @@
                                         <li>
                                             <a href="/pages/contact"><span>Privacy policy</span></a>
                                         </li>
+                                        <li>
+                                            <a href="/{{ route(user_env().'.reviews') }}"><span>Reviews</span></a>
+                                        </li>
                                     </ul>
                                     <ul class="fi-right col-sm-6">
                                         <li>
@@ -152,6 +155,10 @@
                                     </li>
                                     <li>
                                         <a href="{{ route(user_env().'.tutorials.index') }}" title="Tutorials">Tutorials</a>
+                                        <i class="">/</i>
+                                    </li>
+                                        <li>
+                                        <a href="{{ route(user_env().'.reviews') }}" title="Reviews">Reviews</a>
                                         <i class="">/</i>
                                     </li>
                                    

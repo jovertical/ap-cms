@@ -129,7 +129,7 @@
                                         <ul class="dropdown-menu">
                                             <li class=" dropdown li-sub-mega">
                                                 <a href="{{ route(user_env().'.register') }}">
-                                                    <span>Register</span>
+                                                    <span>Pre-Register</span>
                                                     <i class="sub-dropdown1 visible-sm visible-md visible-lg"></i>
                                                     <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                                 </a>
