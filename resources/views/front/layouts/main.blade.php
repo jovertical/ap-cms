@@ -71,12 +71,11 @@
         <!-- Page specific stylesheets -->
         @yield('styles')
         <style>
-.footer {
+.header1 {
    position: fixed;
-   left: 0;
-   bottom: 0;
    width: 100%;
-   text-align: right;
+   text-align: center;
+   background: transparent;
 }
 </style>
     </head>

@@ -218,6 +218,3 @@
         </li>
     </ul>
 </div>
-<div align="right"  class="footer" >
-  <p><a href="{{ route(user_env().'.register') }}" title="register"><img src="/front/register5.png"></a></p>
-</div>

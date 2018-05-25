@@ -266,12 +266,16 @@
                                     </a>
                                 </li>
                             </ul>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
- <img src="/front/banner.jpg" alt="" style="width: 100%;">
+<img src="/front/banner.jpg" alt="" style="width: 100%;">
+<div class="header1" color="gray"><center> <a href="{{ route(user_env().'.register') }}" title="register"><img src="/front/register5.png"></a></center></div>    
+
+
 </header>
 
