@@ -67,20 +67,21 @@
         <script src="/front/cdn.shopify.com/s/files/1/1286/1471/t/2/assets/instafeed.min.js" type="text/javascript"></script>
 
         <link rel="stylesheet" href="/front/app/css/main.css">
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->
         <!-- Page specific stylesheets -->
         @yield('styles')
         <style>
-.header1 {
-   position: fixed;
-   width: 100%;
-   text-align: center;
-   background: transparent;
-}
-</style>
+        .header1 {
+        position: fixed;
+        width: 100%;
+        text-align: center;
+        background: transparent;
+        }
+        </style>
+
 
     </head>
 

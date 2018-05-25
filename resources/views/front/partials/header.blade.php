@@ -274,7 +274,7 @@
         </div>
     </section>
 <img src="/front/banner.jpg" alt="" style="width: 100%;">
-<div class="header1" color="gray"><center> <a href="{{ route(user_env().'.register') }}" title="register"><img src="/front/register5.png"></a></center></div>    
+<div class="header1"><center> <a href="{{ route(user_env().'.register') }}" title="register"><img src="/front/register7.png"></a></center></div>    
 
 
 </header>
