@@ -40,7 +40,7 @@
             
              <div>
               
-              <div class="col-sm-6"> 
+              <i><div class="col-sm-6"> 
                  <center><p>Path A: Reseller Path<br> </center>
 This path may be more suitable for those who wish to initially work underneath an AuraRich Distributor, and supplement their income while testing out the AuraRich system. This path requires smaller initial investment and enables you to fast-track into the Distributor system yourself after you’ve been able to learn the system and build your confidence. <br><br>
 
@@ -73,7 +73,7 @@ This path may be more suitable for those who wish to initially work underneath a
 
 
 
-              </div>
+              </div><i>
              
 
 <center><a href="{{ route(user_env().'.distributorpromotion') }}" title="Distributor Promotion"> <button class='btn btn-primary'>Distributor Promotion</button></a></center>

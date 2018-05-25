@@ -43,7 +43,8 @@
                   </div>
                   <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      See how it works here: <br>  <a href="{{ route(user_env().'.getstarted') }}" title="Get Started">http://www.aurarich.com.ph/getstarted</a><br>
+                       <a href="{{ route(user_env().'.sellaura') }}" title="Sell AuraRich"> http://www.aurarich.com.ph/sellaura </a>
                     </div>
                   </div>
                 </div>
@@ -57,7 +58,8 @@
                   </div>
                   <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <div class="panel-body">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      See how it works here: <br>  <a href="{{ route(user_env().'.howitworks') }}" title="How it works">http://www.aurarich.com.ph/howitworks</a><br>
+                       <a href="{{ route(user_env().'.sellaura') }}" title="Sell AuraRich"> http://www.aurarich.com.ph/sellaura </a>
                     </div>
                   </div>
                 </div>
@@ -71,7 +73,8 @@
                   </div>
                   <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                     <div class="panel-body">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     For purchasing products go here: <br>  <a href="{{ route(user_env().'.products.index') }}" title="Products">http://www.aurarich.com.ph/products</a><br>
+                       <a href="{{ route(user_env().'.distributors') }}" title="Get Started"> http://www.aurarich.com.ph/distributors </a>
                     </div>
                   </div>
                 </div>
@@ -79,13 +82,13 @@
                   <div class="panel-heading" role="tab" id="headingFour">
                     <h4 class="panel-title">
                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        How secure is shopping in the Online Shop? Is my data protected?
+                        Is my data protected?
                       </a>
                     </h4>
                   </div>
                   <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                     <div class="panel-body">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      Yes, Aurarich website is secured. You can check it at the top of the page near the address bar. 
                     </div>
                   </div>
                 </div>
@@ -99,7 +102,7 @@
                   </div>
                   <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                     <div class="panel-body">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                     Bank to Bank and Paypal.
                     </div>
                   </div>
                 </div>
@@ -113,7 +116,7 @@
                   </div>
                   <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
                     <div class="panel-body">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      Yes, as part of the Paypal integration, there will be an invoice that will be generated and can be viewed in your account.
                     </div>
                   </div>
                 </div>
@@ -127,7 +130,7 @@
                   </div>
                   <div id="collapseSv" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSv">
                     <div class="panel-body">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      You can claim your orders via CODs or you can go directly to our branch.
                     </div>
                   </div>
                 </div>
@@ -141,25 +144,11 @@
                   </div>
                   <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
                     <div class="panel-body">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      See Products page for more details: <a href="{{ route(user_env().'.products.index') }}" title="Products"> http://www.aurarich.com.ph/products </a>
                     </div>
                   </div>
                 </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="heading9">
-                    <h4 class="panel-title">
-                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapse9">
-                        What after-sales support do you offer?
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
-                    <div class="panel-body">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
+                 <div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="heading10">
                     <h4 class="panel-title">
                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapse10">
@@ -169,7 +158,7 @@
                   </div>
                   <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
                     <div class="panel-body">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      You can create your account and sign in as a Distributor here : <a href="{{ route(user_env().'.getstarted') }}" title="Get Started"> http://www.aurarich.com.ph/getstarted </a>
                     </div>
                   </div>
                 </div>

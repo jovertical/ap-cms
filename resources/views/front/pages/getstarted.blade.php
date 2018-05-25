@@ -157,7 +157,7 @@ Now that you’ve made the decision to become an AuraRich Reseller or Distributo
                   </div>
 
                   <div class="action_bottom">
-                    <input type="submit" class="btn" value="Register" /> or
+                    <input type="submit" class="btn btn-primary" value="Register" /> or
 
                     <span class="note">
                       <a href="{{ route(user_env().'.login') }}">Already have an account?</a>

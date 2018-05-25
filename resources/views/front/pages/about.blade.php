@@ -1,95 +1,50 @@
 @extends(user_env('layouts.main')) 
 
 @section('content')
-    <div id="main-content" class="wrapper clearfix">
-        <section class="main-slideshow">
-            <div id="home-slideshow" class="home-slideshow-wrapper">
+    <section class="main-slideshow">
+<div id="carousel-example" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example" data-slide-to="1"></li>
+    <li data-target="#carousel-example" data-slide-to="2"></li>
+     <li data-target="#carousel-example" data-slide-to="3"></li>
+  </ol>
 
-                <div class="home-slideshow-inner">
-                    <div class="home-slideshow">
-                        <ul class="slides">
-                            <li class="slideshow-1">
-                                <img src="/front/about1.jpg">
-                                <div class="caption position-left">
-                                    <div class="slide-caption">
-                                        <div class="dis_tablecell">
-                                            <div class="container">
-                                                <p>
-                                                    <span class="title">
-                                                         
-                                                    </span>
-                                                    <span class="title_bold"> </span>
-                                                    <span class="content">  </span>
-                                                </p>
+  <div class="carousel-inner">
+    <div class="item active">
+      <a href="#"><img src="/front/about1.jpg"></a>
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+    <div class="item">
+      <a href="#"><img src="/front/about2.jpg"></a>
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+    <div class="item">
+      <a href="#">  <img src="/front/about3.jpg" /></a>
+      <div class="carousel-caption">
+       
+      </div>
+    </div>
+    <div class="item">
+      <a href="#">   <img src="/front/about4.jpg"></a>
+      <div class="carousel-caption">
+       
+      </div>
+    </div>
+    
 
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                           
-                            <li class="slideshow-3">
-                                <img src="/front/about2.jpg" />
-                                <div class="caption position-left">
-                                    <div class="slide-caption">
-                                        <div class="dis_tablecell">
-                                            <div class="container">
-                                                <p>
-                                                    <span class="title">
-                                                     
-                                                    </span>
-                                                    <span class="title_bold">AuraRich Philippines</span>
-                                                    <span class="content"> </span>
-                                                </p>
- 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="slideshow-1">
-                                <img src="/front/about3.jpg">
-                                <div class="caption position-left">
-                                    <div class="slide-caption">
-                                        <div class="dis_tablecell">
-                                            <div class="container">
-                                                <p>
-                                                    <span class="title">
-                                                        
-                                                    </span>
-                                                    <span class="title_bold">AuraRich Philippines</span>
-                                                    <span class="content">  </span>
-                                                </p>
- 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                             <li class="slideshow-2">
-                                <img src="/front/about4.jpg">
-                                <div class="caption position-right">
-                                    <div class="slide-caption">
-                                        <div class="dis_tablecell">
-                                            <div class="container">
-                                                <p>
-                                                    
-                                                    <span class="title_bold">AuraRich Philippines</span>
-                                                    <span class="content"> 
-                                                    </span>
-                                                </p>
- 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+    </section>
 
   <div id="main-content" class="wrapper clearfix">           
     <section class="page-heading">
