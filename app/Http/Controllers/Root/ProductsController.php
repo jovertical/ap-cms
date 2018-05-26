@@ -74,10 +74,10 @@ class ProductsController extends Controller
         return DataTables::of(Product::get())
             ->rawColumns(['description'])
             ->addColumn('category', function (Product $product) {
-                return $product->category->toArray();
+                return optional($product->category)->toArray();
             })
             ->addColumn('images', function (Product $product) {
-                return $product->images->toArray();
+                return optional($product->images)->toArray();
             })
             ->addColumn('creator', function (Product $product) {
                 return optional($product->creator)->toArray();
