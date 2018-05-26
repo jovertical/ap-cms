@@ -13,6 +13,7 @@ class CategoriesTableSeeder extends Seeder
     {
         \App\Category::create([
             'name' => 'demo',
+            'id' => '1',
             'description' => 'Lorem ipsum dolor sit amet.'
         ]);
     }
