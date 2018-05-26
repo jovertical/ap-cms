@@ -13,21 +13,21 @@
 		<div class="row-right col-md-7">
 			<div class="list-mode">
 				<div class="product-title">
-					<a class="title-5" href="#">{{ $product->name }}</a>
+					<i><a class="title-5" href="#">{{ $product->name }}</a></i>
 				</div>
 
-				<div class="product-price">
+				<!--<div class="product-price">
 					<span class="price_sale">₱{{ $product->price }}</span>
-				</div>
+				</div>-->
 
 				<div class="product-description">
-					{!! str_limit($product->description, 250) !!}
+					<i><b>{!! str_limit($product->description, 250) !!}</i></b>
 				</div>
 
 				<div class="product-group-actions mt-4">
 					<form method="POST" action="#" class="product-addtocart">
 						<button class="btn btn-1 select-option" type="button">
-						<i class="fa fa-cart"></i> Add to cart
+						<i class="fa fa-cart"></i> <i>Reserve Now</i>
 						</button>
 					</form>
 				</div>

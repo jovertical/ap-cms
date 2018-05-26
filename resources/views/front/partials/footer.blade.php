@@ -52,15 +52,13 @@
                             <div class="footer-block01 about-us col-ms-5 col-md-5">
                                 <div class="footer-title "><h5>About us</h5></div>
                                 <div class="fi-aboutus-content">
-                                    <div class="top"><i>{!! Str::limit($app['about'], 250) !!}</i></div>
+                                    <div class="top"><i>{!! Str::limit($app['about'], 455) !!}</i></div>
                                     <div class="bottom">
                                         <div class="address"><i class="fa fa-home"></i> {!! $app['address'] !!} </div>
-                                        <div class="phone"><i class="fa fa-phone"></i> {{$app['phone_number_1']}} </div>
-                                        <div class="phone"><i class="fa fa-phone"></i> {{$app['phone_number_2']}} </div>
-                                        <div class="email"><i class="fa fa-envelope"></i> {{$app['email']}} </div>
                                         <div class="email"><i class="fa fa-envelope"></i> jessica@aurarich.com.ph </div>
                                         <div class="email"><i class="fa fa-envelope"></i> dave@aurarich.com.ph </div>
                                          <div class="email"><i class="fa fa-envelope"></i> contest@aurarich.com.ph </div>
+                                         <div class="email"><i class="fa fa-envelope"></i> info@aurarich.com.ph </div>
                                     </div>
                                 </div>
                             </div>

@@ -48,7 +48,7 @@ class ProductsTableSeeder extends Seeder
 
               \App\Product::create([
             'name' => 'Aura Rich Bearberry White Booster Face',
-            'description' => 'Nourishes, moisturizes, restores youthfulness of the face to be silky smooth and clear. It removes dark spots and whitens the skin. It does not clog pores. It protect the skin from UVA & UVE rays that causes skin damage; helping the skin to look silky smooth',
+            'description' => 'Nourishes, moisturizes, restores youthfulness of the face to be silky smooth and clear. It removes dark spots and whitens the skin. It does not clog pores. It protect the skin from UVA & UVE rays that causes skin damage.',
             'price' => '111',
             'category_id' => 1,
         ]);
@@ -62,14 +62,14 @@ class ProductsTableSeeder extends Seeder
 
                 \App\Product::create([
             'name' => 'Aura Rich Gold Face Powder SPF 35 PA++',
-            'description' => 'lorem ipsum',
+            'description' => 'Discover the new dimension of face powder with a mixture of Honey, Gold, and Collagen. It helps prevent wrinkles and does not clog pores.',
             'price' => '111',
             'category_id' => 1,
         ]);
 
                  \App\Product::create([
             'name' => 'Perfect Face Makeup',
-            'description' => '-A full makeup set has 3 lipstick color shades ,  6  eyeshadow shades, blusher, bronzer and highlighter.  ',
+            'description' => 'A full Makeup set with 3 Lipstick Color Shades, 6 Eyeshadow Shades, Blusher, Bronzer, and Highlighter.',
             'price' => '111',
             'category_id' => 1,
         ]);
