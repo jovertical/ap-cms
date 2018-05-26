@@ -60,6 +60,7 @@
                                         <div class="email"><i class="fa fa-envelope"></i> {{$app['email']}} </div>
                                         <div class="email"><i class="fa fa-envelope"></i> jessica@aurarich.com.ph </div>
                                         <div class="email"><i class="fa fa-envelope"></i> dave@aurarich.com.ph </div>
+                                         <div class="email"><i class="fa fa-envelope"></i> contest@aurarich.com.ph </div>
                                     </div>
                                 </div>
                             </div>
@@ -69,10 +70,11 @@
                                     <ul class="fi-left col-sm-6">
 
                                         <li>
-                                            <a href="/pages/contact"><span>Privacy policy</span></a>
-                                        </li>
-                                        <li>
                                             <a href="/{{ route(user_env().'.reviews') }}"><span>Reviews</span></a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="/pages/contact"><span>Privacy policy</span></a>
                                         </li>
                                     </ul>
                                     <ul class="fi-right col-sm-6">
@@ -80,28 +82,13 @@
                                             <a href="{{ route(user_env().'.location') }}"><span>Store Location</span></a>
                                         </li>
                                         <li>
+                                            <a href="{{ route(user_env().'.location') }}"><span>Site Map</span></a>
+                                        </li>
+                                        <li>
                                             <a href="{{ route(user_env().'.contact') }}"><span>Contact us</span></a>
                                         </li>
                                     </ul>
-                                     <ul class="fi-left col-sm-6">
-
-                                          <div class="copy-right-right">
-                            <div class="footer_social">
-                                <a href="{{ $app['facebook_url'] }}" title="Aura Rich on Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                                <a href="{{ $app['youtube_url'] }}" title="Aura Rich on Youtube">
-                                    <i class="fa fa-youtube"></i>
-                                </a>
-                                <a href="{{ $app['twitter_url'] }}" title="Aura Rich on Twitter">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                                <a href="{{ $app['instagram_url'] }}" title="Aura Rich on Instagram">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                                    </ul>
+                        
                                   
                                 </div>
                             </div>
@@ -165,8 +152,22 @@
                                 | All Rights Reserved  {{ date('Y') }}
                             </div>
                         </div>
-                        
-                    </div>
+                                         <div class="copy-right-right">
+                            <div class="footer_social">
+                                <a href="{{ $app['facebook_url'] }}" title="Aura Rich on Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="{{ $app['youtube_url'] }}" title="Aura Rich on Youtube">
+                                    <i class="fa fa-youtube"></i>
+                                </a>
+                                <a href="{{ $app['twitter_url'] }}" title="Aura Rich on Twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="{{ $app['instagram_url'] }}" title="Aura Rich on Instagram">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>

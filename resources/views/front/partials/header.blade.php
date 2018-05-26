@@ -217,21 +217,35 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class=" dropdown li-sub-mega">
-                                            <a href="{{ route(user_env().'.about') }}">
-                                                <span>About Us</span>
-
-                                                <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
-                                                <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
-                                            </a>
-
-                                        </li>
-                                        <li class=" dropdown li-sub-mega">
                                             <a href="{{ route(user_env().'.getstarted') }}">
-                                                <span>Sell Aura Rich</span>
+                                                <span>Get Started</span>
                                                 <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
                                                 <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                             </a>
+                                        </li>
+                                         <li class=" dropdown li-sub-mega">
+                                            <a href="{{ route(user_env().'.howitworks') }}">
+                                                <span>How it Works</span>
 
+                                                <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                            </a>
+                                        </li>
+                                         <li class=" dropdown li-sub-mega">
+                                            <a href="{{ route(user_env().'.distributorpromotion') }}">
+                                                <span>Distributor Promotion</span>
+
+                                                <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                            </a>
+                                        </li>
+                                         <li class=" dropdown li-sub-mega">
+                                            <a href="{{ route(user_env().'.system') }}">
+                                                <span>Gold Point Incentive</span>
+
+                                                <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                            </a>
                                         </li>
                                     </ul>
                                 </li>
@@ -264,6 +278,62 @@
                                     <a href="{{ route(user_env().'.tutorials.index') }}">
                                         <span>Tutorials</span>
                                     </a>
+                                </li>
+                                 <li class="nav-item dropdown navigation">
+                                    @auth
+                                        <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
+                                            <span>My account</span>
+                                            <i class="fa fa-angle-down"></i>
+                                            <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                            <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class=" dropdown li-sub-mega">
+                                                <a href="{{ route(user_env().'.account.profile') }}">
+                                                    <span>My profile</span>
+                                                    <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                    <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class=" dropdown li-sub-mega">
+                                                <a href="{{ route(user_env().'.account.password') }}">
+                                                    <span>My password</span>
+                                                    <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                    <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class=" dropdown li-sub-mega">
+                                                <a href="{{ route(user_env().'.logout') }}">
+                                                    <span>Logout</span>
+                                                    <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                    <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    @else
+                                        <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
+                                            <span>My account</span>
+                                            <i class="fa fa-angle-down"></i>
+                                            <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                            <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class=" dropdown li-sub-mega">
+                                                <a href="{{ route(user_env().'.register') }}">
+                                                    <span>Pre-Register</span>
+                                                    <i class="sub-dropdown1 visible-sm visible-md visible-lg"></i>
+                                                    <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class=" dropdown li-sub-mega">
+                                                <a href="{{ route(user_env().'.login') }}">
+                                                    <span>Login</span>
+                                                    <i class="sub-dropdown1 visible-sm visible-md visible-lg"></i>
+                                                    <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    @endauth
                                 </li>
                             </ul>
 
