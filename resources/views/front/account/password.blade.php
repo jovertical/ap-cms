@@ -1,9 +1,6 @@
 @extends(user_env().'.layouts.main')
 
 @section('content')
-@extends(user_env().'.layouts.main')
-
-@section('content')
     <section class="page-heading">
         <div class="page-heading-wrapper">
             <div class="container">
@@ -88,5 +85,4 @@
             </div>
         </div>
     </section>
-@endsection
 @endsection

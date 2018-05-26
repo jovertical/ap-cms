@@ -1,5 +1,13 @@
 @extends(user_env().'.layouts.main')
 
+@section('styles')
+	<style>
+		input.capitalize, textarea.capitalize, select.capitalize{
+			text-transform: uppercase;
+		}
+	</style>
+@endsection
+
 @section('content')
     <section class="page-heading">
         <div class="page-heading-wrapper">
@@ -22,7 +30,7 @@
 					<div class="register-inner">
 						<div id="customer-register">
 							<div id="register">
-								<form method="POST" action="{{ route(user_env().'.register') }}">
+								<form method="POST" action="{{ route(user_env().'.register') }}" novalidate>
 									@csrf
 
 									<!-- Firstname -->
@@ -31,8 +39,8 @@
 											Firstname <span class="text-danger">*</span>
 										</label>
 
-										<input type="text" name="first_name" id="first_name" class="text"
-											value="{{ old('first_name') }}" placeholder="Please enter your firstname" required>
+										<input type="text" name="first_name" id="first_name" class="text capitalize"
+											value="{{ old('first_name') }}" required>
 
 										@if ($errors->has('first_name'))
 											<div class="mb-2 text-left">
@@ -47,8 +55,8 @@
 											Lastname <span class="text-danger">*</span>
 										</label>
 
-										<input type="text" name="last_name" id="last_name" class="text"
-											value="{{ old('last_name') }}" placeholder="Please enter your lastname" required>
+										<input type="text" name="last_name" id="last_name" class="text capitalize"
+											value="{{ old('last_name') }}" required>
 
 										@if ($errors->has('last_name'))
 											<div class="mb-2 text-left">
@@ -64,8 +72,7 @@
 										</label>
 
 										<input type="text" name="birthdate" id="birthdate" class="text"
-											value="{{ old('birthdate') }}" placeholder="Please enter your birthdate"
-												data-inputmask="'alias': 'date'" required>
+											value="{{ old('birthdate') }}" data-inputmask="'alias': 'date'" required>
 
 										@if ($errors->has('birthdate'))
 											<div class="mb-2 text-left">
@@ -81,7 +88,7 @@
 												Province <span class="text-danger">*</span>
 											</label>
 
-											<select name="province" id="province" class="select"
+											<select name="province" id="province" class="select capitalize"
 												data-old="{{ old('province') }}">
 											</select>
 										</p>
@@ -100,7 +107,7 @@
 												City <span class="text-danger">*</span>
 											</label>
 
-											<select name="city" id="city" class="select" disabled="true"
+											<select name="city" id="city" class="select capitalize" disabled="true"
 												data-old="{{ old('city') }}">
 											</select>
 										</p>
@@ -119,7 +126,7 @@
 												District <span class="text-danger">*</span>
 											</label>
 
-											<select name="district" id="district" class="select" disabled="true"
+											<select name="district" id="district" class="select capitalize" disabled="true"
 												data-old="{{ old('district') }}">
 											</select>
 										</p>
@@ -169,8 +176,8 @@
 											Occupation <span class="text-danger">*</span>
 										</label>
 
-										<input type="text" name="occupation" id="occupation" class="text"
-											value="{{ old('occupation') }}" placeholder="Please enter your occupation" required>
+										<input type="text" name="occupation" id="occupation" class="text capitalize"
+											value="{{ old('occupation') }}" required>
 
 										@if ($errors->has('occupation'))
 											<div class="mb-2 text-left">
@@ -227,6 +234,19 @@
 									</div>
 
 									<div class="action_bottom">
+										<p class="note">
+											<input type="checkbox" name="agree" id="agree"
+												value="1" {{ old('agree') ? 'checked' : '' }} required>
+											I have read &amp; understood <a href="#">Terms &amp; Conditions</a> on the use if this website.
+											I agree to be bound by all the provisions therein <a href="#">Terms &amp; Conditions</a>.
+
+											@if ($errors->has('agree'))
+												<div class="mb-2 text-left">
+													<span class="text-danger">{{ $errors->first('agree') }}</span>
+												</div>
+											@endif
+										</p>
+
 										<input type="submit" class="btn" value="Register" /> or
 
 										<span class="note">
@@ -257,6 +277,11 @@
 	<script>
 		$("input#birthdate").inputmask("9999-99-99", {
 			"placeholder": "yyyy-mm-dd",
+			"clearIncomplete": true
+		});
+
+		$("input#tin").inputmask("999-999-999", {
+			"placeholder": "***-***-***",
 			"clearIncomplete": true
 		});
 

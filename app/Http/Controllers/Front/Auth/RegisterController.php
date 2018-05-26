@@ -51,8 +51,10 @@ class RegisterController extends Controller
 
             'email' => 'required|string|email|max:255|unique:users,email,NULL,id,deleted_at,NULL',
             'password' => 'required|string|confirmed|min:6|pwned:100',
+            'agree' => 'required'
         ], [
-            'before' => 'You must be 18 years old.'
+            'birthdate.before' => 'You must be 18 years old.',
+            'agree.required' => 'You must agree with our Terms & Conditions.',
         ]);
 
         $token = base64_encode($request->input('email'));
