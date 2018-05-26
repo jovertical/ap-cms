@@ -239,7 +239,7 @@
                                 return '<span class="m-badge ' + statuses[active].class +
                                 ' m-badge--wide">' + statuses[active].title + '</span>';
                             },
-                        },                        
+                        },
                         {
                             field: 'birthdate',
                             title: 'Birthdate',
@@ -276,6 +276,16 @@
                             field: 'address',
                             title: 'Address',
                             width: 350,
+                        },
+                        {
+                            field: 'tin',
+                            title: 'TIN',
+                            width: 100,
+                        },
+                        {
+                            field: 'occupation',
+                            title: 'Occupation',
+                            width: 100,
                         },
                         {
                             field: 'creator',
