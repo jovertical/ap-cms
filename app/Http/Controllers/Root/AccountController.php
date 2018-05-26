@@ -73,7 +73,16 @@ class AccountController extends Controller
             if (Hash::check($request->input('old_password'), $superuser->password)) {
                 $superuser->password = bcrypt($request->input('password'));
                 if ($superuser->save()) {
-                    Notify::success('Password updated.', 'Success!');
+                    auth()->logout();
+
+                    $request->session()->invalidate();
+
+                    session()->flash('message', [
+                        'type' => 'success',
+                        'content' => 'Password updated.'
+                    ]);
+
+                    return redirect()->route(user_env().'.login');
                 }
 
                 return back();

@@ -24,7 +24,7 @@
                                         <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                       
+
                                         <li class=" dropdown li-sub-mega">
                                             <a href="{{ route(user_env().'.getstarted') }}">
                                                 <span>Get Started</span>
@@ -112,7 +112,7 @@
                                                 </a>
                                             </li>
                                             <li class=" dropdown li-sub-mega">
-                                                <a href="/logout">
+                                                <a href="{{ route(user_env().'.logout') }}">
                                                     <span>Logout</span>
                                                     <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
                                                     <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
@@ -147,7 +147,7 @@
                             </ul>
                         </div>
 
-                   
+
 
                         <div class="mobile-top-navigation visible-xs">
                             <button id="showLeftPush" class="visible-xs">
@@ -274,7 +274,7 @@
         </div>
     </section>
 <img src="/front/banner.jpg" alt="" style="width: 100%;">
-<div class="header1"><center> <a href="{{ route(user_env().'.register') }}" title="register"><img src="/front/register7.png"></a></center></div>    
+<div class="header1"><center> <a href="{{ route(user_env().'.register') }}" title="register"><img src="/front/register7.png"></a></center></div>
 
 
 </header>

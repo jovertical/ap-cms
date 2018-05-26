@@ -98,8 +98,7 @@ Route::namespace('Root')->prefix('su')->name('root.')->group(function () {
         Route::resource('news', 'NewsController');
         Route::prefix('news')->name('news.')->group(function() {
             Route::get('datatables/index', 'NewsController@datatables')->name('datatables.index');
-            Route::patch('/{news}/toggle', 'NewssController@toggle')->name('toggle');
-
+            Route::patch('/{news}/toggle', 'NewsController@toggle')->name('toggle');
         });
 
         Route::patch('/notification/{user}', function(\App\User $user) {

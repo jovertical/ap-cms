@@ -59,10 +59,10 @@
                         </div>
                         <!--/. New Password -->
 
-                        <!-- Password confirmation -->
+                        <!-- New password confirmation -->
                         <div class="form-group m-form__group row">
                             <label for="password_confirmation" class="col-lg-2 col-form-label">
-                                Password confirmation <span class="m--font-danger">*</span>
+                                New password confirmation <span class="m--font-danger">*</span>
                             </label>
 
                             <div class="col-lg-7">

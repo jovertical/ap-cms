@@ -29,17 +29,20 @@ Route::namespace('Front')->name('front.')->group(function () {
     Route::prefix('tutorials/{tutorial}/episodes')->name('episodes.')->group(function() {
         Route::get('/{number}', 'EpisodesController@show')->name('show');
     });
-    
+
     Route::namespace('Auth')->group(function() {
         Route::post('subscribe', 'NewsletterController@subscribe')->name('subscribe');
-        
-        Route::get('register', 'RegisterController@showRegisterForm')->name('register');
-        Route::post('register', 'RegisterController@register');
-        Route::get('register/{token}', 'RegisterController@verify')->name('verify');
 
-        Route::get('login', 'LoginController@showLoginForm')->name('login');
-        Route::post('login', 'LoginController@login');
-        Route::post('logout', 'LoginController@logout')->name('logout');
+        Route::middleware('front.guest')->group(function() {
+            Route::get('register', 'RegisterController@showRegisterForm')->name('register');
+            Route::post('register', 'RegisterController@register');
+            Route::get('register/{token}', 'RegisterController@verify')->name('verify');
+
+            Route::get('login', 'LoginController@showLoginForm')->name('login');
+            Route::post('login', 'LoginController@login');
+        });
+
+        Route::get('logout', 'LoginController@logout')->middleware('front.auth')->name('logout');
 
         Route::prefix('password')->name('password.')->group(function() {
             Route::get('reset', 'ForgotPasswordController@showLinkRequestForm')->name('request');
