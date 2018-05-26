@@ -64,10 +64,11 @@ class RegisterController extends Controller
         $user = new User;
         $user->first_name = $request->input('first_name');
         $user->last_name = $request->input('last_name');
+        $user->birthdate = $request->input('birthdate');
         $user->address = ucfirst(
             strtolower(
-                $request->input('province').', '.
-                $request->input('city').', '.
+                $request->input('province').'|'.
+                $request->input('city').'|'.
                 $request->input('district')
             )
         );
