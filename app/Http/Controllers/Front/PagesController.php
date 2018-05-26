@@ -50,7 +50,7 @@ class PagesController extends Controller
         $categories = $this->category_repo->categories->limit(3)->get();
         $new_products = $this->product_repo->products->limit(5)->latest()->get();
         $featured_products = $this->product_repo->products->where('featured', 1)->limit(5)->get();
-        
+
         return view(user_env().'.pages.home', compact([
             'categories', 'new_products', 'featured_products'
         ]));
@@ -59,7 +59,7 @@ class PagesController extends Controller
     public function about()
     {
     	$classes = [
-    		'article', 'ltr'  
+    		'article', 'ltr'
     	];
 
     	return view(user_env('pages.about'), compact('classes'));

@@ -93,18 +93,18 @@
                                     <!-- Gender -->
                                     <div class="clearfix large_form">
                                         <p class="field">
-                                        <label for="birthdate" class="label">
-                                            Gender
-                                        </label>
+                                            <label for="birthdate" class="label">
+                                                Gender
+                                            </label>
 
-                                        <select name="gender" id="gender" class="select">
-                                            <option value="" disabled selected>Please select gender</option>
-                                            <option value="male" {{ strtolower(old('gender') ?? $user->gender) ==
-                                                'male' ? 'selected' : '' }}>Male</option>
-                                            <option value="female" {{ strtolower(old('gender') ?? $user->gender) ==
-                                                'female' ? 'selected' : '' }}>Female</option>
-                                        </select>
-                                    </p>
+                                            <select name="gender" id="gender" class="select">
+                                                <option value="" disabled selected>Please select gender</option>
+                                                <option value="male" {{ strtolower(old('gender') ?? $user->gender) ==
+                                                    'male' ? 'selected' : '' }}>Male</option>
+                                                <option value="female" {{ strtolower(old('gender') ?? $user->gender) ==
+                                                    'female' ? 'selected' : '' }}>Female</option>
+                                            </select>
+                                        </p>
 
                                         @if ($errors->has('gender'))
                                             <div class="mb-2 text-left">

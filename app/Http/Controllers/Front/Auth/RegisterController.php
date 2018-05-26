@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Front\Auth;
 
-/** 
+/**
  * Jobs
  */
 use App\Jobs\{SendVerificationEmail, SendNewsletter};
@@ -39,12 +39,20 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         $this->validate($request, [
-            'first_name'        => 'required|string|max:255',
-            'last_name'         => 'required|string|max:255',
-            'contact_number'    => 'required|numeric',
-            'address'           => 'required|string|max:510',
-            'email'             => 'required|string|email|max:255|unique:users,email,NULL,id,deleted_at,NULL',
-            'password'          => 'required|string|confirmed|min:6|pwned:100',
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'birthdate' => 'required|date|before:18 years ago',
+            'province' => 'required|string',
+            'city' => 'required|string',
+            'district' => 'required|string',
+            'contact_number' => 'required|max:255',
+            'tin' => 'required|max:255',
+            'occupation' => 'required|max:255',
+
+            'email' => 'required|string|email|max:255|unique:users,email,NULL,id,deleted_at,NULL',
+            'password' => 'required|string|confirmed|min:6|pwned:100',
+        ], [
+            'before' => 'You must be 18 years old.'
         ]);
 
         $token = base64_encode($request->input('email'));
@@ -52,19 +60,27 @@ class RegisterController extends Controller
         $password = $request->input('password');
 
         $user = new User;
-        $user->first_name       = $request->input('first_name');
-        $user->last_name        = $request->input('last_name');
-        $user->contact_number   = $request->input('contact_number');
-        $user->address          = $request->input('address');
-        $user->name             = $name;
-        $user->email            = $request->input('email');
-        $user->email_token      = $token;
-        $user->password         = bcrypt($password);
+        $user->first_name = $request->input('first_name');
+        $user->last_name = $request->input('last_name');
+        $user->address = ucfirst(
+            strtolower(
+                $request->input('province').', '.
+                $request->input('city').', '.
+                $request->input('district')
+            )
+        );
+        $user->contact_number = $request->input('contact_number');
+        $user->tin = $request->input('tin');
+        $user->occupation = $request->input('occupation');
+        $user->name = $name;
+        $user->email = $request->input('email');
+        $user->email_token = $token;
+        $user->password = bcrypt($password);
 
         if ($user->save()) {
             // Welcome email.
             $user->notify(new WelcomeMessage($user));
-            
+
             event(new Registered($user));
 
             // Trigger email verification job

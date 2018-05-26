@@ -33,6 +33,8 @@ class CreateUsersTable extends Migration
             $table->enum('gender', ['male', 'female', ''])->nullable();
             $table->text('address')->nullable();
             $table->string('contact_number')->nullable();
+            $table->string('tin')->nullable();
+            $table->string('occupation')->nullable();
 
             $table->text('file_path')->nullable();
             $table->text('file_directory')->nullable();

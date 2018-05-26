@@ -61,4 +61,16 @@ Route::namespace('Front')->name('front.')->group(function () {
             Route::patch('password', 'AccountController@updatePassword');
         });
     });
+
+    Route::get('/addressess', function() {
+        $address = new App\Acme\Repositories\AddressRepository;
+        $level = request('level');
+        $code = request('code');
+
+        if (($level != null) && ($code != null)) {
+            return $address->$level($code)->get();
+        }
+
+        return response()->json($address->provinces);
+    });
 });
