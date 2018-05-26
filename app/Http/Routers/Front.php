@@ -15,6 +15,7 @@ Route::namespace('Front')->name('front.')->group(function () {
     Route::get('/news', 'PagesController@news')->name('news');
     Route::get('/distributors', 'PagesController@distributors')->name('distributors');
     Route::get('/reviews', 'PagesController@reviews')->name('reviews');
+    Route::get('/location', 'PagesController@location')->name('location');
 
     Route::prefix('products')->name('products.')->group(function() {
         Route::get('/', 'ProductsController@index')->name('index');

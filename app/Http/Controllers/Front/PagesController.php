@@ -144,4 +144,10 @@ class PagesController extends Controller
 
         return view(user_env('pages.sellaura'), compact('classes'));
     }
+     public function location()
+    {
+        $classes = [];
+
+        return view(user_env('pages.location'), compact('classes'));
+    }
 }

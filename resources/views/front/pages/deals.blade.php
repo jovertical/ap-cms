@@ -49,7 +49,7 @@
   Honey Gold Sun Care, <br>
   Bearberry White Booster Face<br><br>
 </div>
-  <div class="col-sm-6"> <img src="/front/reseller1.jpg"> <br><br><a href="{{ route(user_env().'.getstarted') }}"> <button type="button" class="btn btn-1 select-option"><i class="fa fa-plus"></i>  Reserve Deal</button></a><br> Distributor Signup Pack <br> </div>
+  <div class="col-sm-6"> <img src="/front/DistributorSignup.png"> <br><br><a href="{{ route(user_env().'.getstarted') }}"> <button type="button" class="btn btn-1 select-option"><i class="fa fa-plus"></i>  Reserve Deal</button></a><br> Distributor Signup Pack <br> </div>
 </div>
 </center>
 
@@ -60,7 +60,7 @@
   Perfect Face Makeup,
   Honey Gold Face Powder<br><br>
   </div>
-  <div class="col-sm-6"> <img src="/front/reseller1.jpg"> <br><br><a href="{{ route(user_env().'.getstarted') }}"> <button type="button" class="btn btn-1 select-option"><i class="fa fa-plus"></i>  Reserve Deal</button></a><br> Distributor Sample Pack <br> </div>
+  <div class="col-sm-6"> <img src="/front/DistributorSample.png"> <br><br><a href="{{ route(user_env().'.getstarted') }}"> <button type="button" class="btn btn-1 select-option"><i class="fa fa-plus"></i>  Reserve Deal</button></a><br> Distributor Sample Pack <br> </div>
 </div>
 </center>
 
@@ -72,7 +72,7 @@
   Honey Gold Body Serum,
   Honey Gold Body Lotion<br><br>
 </div>
-  <div class="col-sm-6"> <img src="/front/reseller1.jpg"> <br><br><a href="{{ route(user_env().'.getstarted') }}"> <button type="button" class="btn btn-1 select-option"><i class="fa fa-plus"></i>  Reserve Deal</button></a><br> Distributor Starter Pack <br> </div>
+  <div class="col-sm-6"> <img src="/front/DistributorStarter.png"> <br><br><a href="{{ route(user_env().'.getstarted') }}"> <button type="button" class="btn btn-1 select-option"><i class="fa fa-plus"></i>  Reserve Deal</button></a><br> Distributor Starter Pack <br> </div>
 </div>
 </center>
 

@@ -77,13 +77,7 @@
                                     </ul>
                                     <ul class="fi-right col-sm-6">
                                         <li>
-                                            <a href="/pages/faqs"><span>Store Location</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="/pages/lookbook"><span>Site map</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route(user_env().'.newsletter') }}"><span>Newsletter</span></a>
+                                            <a href="{{ route(user_env().'.location') }}"><span>Store Location</span></a>
                                         </li>
                                         <li>
                                             <a href="{{ route(user_env().'.contact') }}"><span>Contact us</span></a>

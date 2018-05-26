@@ -11,8 +11,8 @@ class FileUploader implements FileUploaderInterface
     {
         $file_ext = $file->getClientOriginalExtension();
         $file_name = create_filename($file_ext);
-        $resized = ['height' => 300, 'width' => 300];
-        $thumbnail = ['height' => 150, 'width' => 150];
+        $resized = ['height' => 500, 'width' => 500];
+        $thumbnail = ['height' => 500, 'width' => 500];
 
         $base_directory = 'storage/'.$directory;
         $thumbs_directory = $base_directory.'/thumbnails';
