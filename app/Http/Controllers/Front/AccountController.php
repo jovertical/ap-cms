@@ -21,22 +21,32 @@ class AccountController extends Controller
 
         $this->validate($request, [
             'first_name' => 'required|string|max:255',
-            'middle_name' => 'max:255',
             'last_name' => 'required|string|max:255',
-            'birthdate' => 'max:255',
-            'gender' => 'max:255',
-            'address' => 'max:510',
-            'contact_number' => 'max:255'
+            'birthdate' => 'required|date|before:18 years ago',
+            'province' => 'required|string',
+            'city' => 'required|string',
+            'district' => 'required|string',
+            'contact_number' => 'required|max:255',
+            'tin' => 'required|max:255',
+            'occupation' => 'required|max:255',
+        ], [
+            'birthdate.before' => 'You must be 18 years old.'
         ]);
 
         try {
             $user->first_name = $request->input('first_name');
-            $user->middle_name = $request->input('middle_name');
             $user->last_name = $request->input('last_name');
             $user->birthdate = $request->input('birthdate');
-            $user->gender = $request->input('gender');
-            $user->address = $request->input('address');
+            $user->address = ucfirst(
+                strtolower(
+                    $request->input('province').'|'.
+                    $request->input('city').'|'.
+                    $request->input('district')
+                )
+            );
             $user->contact_number = $request->input('contact_number');
+            $user->tin = $request->input('tin');
+            $user->occupation = $request->input('occupation');
 
             if ($user->save()) {
                 session()->flash('message', [

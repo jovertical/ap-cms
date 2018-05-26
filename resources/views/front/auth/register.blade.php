@@ -1,13 +1,5 @@
 @extends(user_env().'.layouts.main')
 
-@section('styles')
-	<style>
-		input.capitalize, textarea.capitalize, select.capitalize{
-			text-transform: uppercase;
-		}
-	</style>
-@endsection
-
 @section('content')
     <section class="page-heading">
         <div class="page-heading-wrapper">

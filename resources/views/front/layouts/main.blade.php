@@ -103,7 +103,7 @@
     </style>
 </head>
 
-<body class="{{ implode(' ', $classes ?? []) }}">
+<body class="{{ implode(' ', $classes ?? []) }}" style="display: none;">
     @include(user_env('partials.header'))
 
     <div class="fix-sticky"></div>
@@ -129,6 +129,8 @@
 
         <script>
             $(document).ready(function (e) {
+                $('body').css({display: 'block'});
+
                 $('#messageModal').modal();
             });
 
