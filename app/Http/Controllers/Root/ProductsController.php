@@ -133,8 +133,7 @@ class ProductsController extends Controller
         $this->validate($request, [
         	'category' => 'required|integer',
             'name' => 'required|max:255|unique:categories,name,NULL,id,deleted_at,NULL',
-            'price' => 'required',
-            'description' => 'max:510'
+            'price' => 'required'
         ]);
 
         try {
@@ -181,8 +180,7 @@ class ProductsController extends Controller
         $this->validate($request, [
         	'category' => 'required|integer',
             'name' => "required|max:255|unique:products,name,{$product->id},id,deleted_at,NULL",
-            'price' => 'required',
-            'description' => 'max:510'
+            'price' => 'required'
         ]);
 
         try {

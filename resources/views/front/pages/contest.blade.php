@@ -8,12 +8,12 @@
     <div class="container">
       <div class="row">
         <div class="page-heading-inner">
-          <h1 class="page-title"><span>News</span></h1>
+          <h1 class="page-title"><span>Before and After Contest</span></h1>
           <div class="breadcrumb clearfix">
             <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ route(user_env().'.home') }}" title="Cosmetics Style 2" itemprop="url"><span itemprop="title">Home</span></a></span>
             <span class="arrow-space">&#62;</span>
             <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-              <a href="{{ route(user_env().'.news') }}" title="News">News</a>
+              <a href="{{ route(user_env().'.contest') }}" title="Contest">Contest</a>
 
             </span> <br> 
                  
@@ -31,12 +31,7 @@
         <div class="page-inner">
           <div id="page">
             <div class="details">              
-              <center><p><b> <i> Aurarich is expanding into the Philippines! Visit our Sell AuraRich page for details on how to register as an Independent Distributor or Reseller. <br></b> </i> </p></center>
-              <center><h4><b> <i> <p>Sign up for our newsletter to stay up to date on launch date events and all other updates to the AuraRich launch. </b> </i> </h4></p></center><br><br>
-              <div class="col-sm-12">
-                <img src="/front/News.jpg">
-                <center><b> <i> <p>Photo: AuraRich Thailand Team visiting Macau, Tokyo, and Singapore in 2017.</b> </i> </p></center>
-              </div>
+              <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <i> AuraRich is offering gold point building incentive opportunities to those Distributors and Customers who submit photos of themselves Before and After using AuraRich products. Winners will be chosen on a monthly basis and will be displayed on our site and in our monthly news letter. Submit photos and a statement of  how you enjoy AuraRich to contest@aurarich.com.ph </i>  </p>
             
             </div>
           </div>
