@@ -24,30 +24,25 @@
 									{{ $tutorials->links() }}
 								</div>
 								
-								<div class="gallery">
+								<div class="col-sm-4">
   <a target="_blank" href="/front/set1.png">
     <img src="/front/set1.png" alt=" " width="500" height="500">
   </a>
   <div class="desc">Aura Face Set</div>
 </div>
-
-<div class="gallery">
+<div class="col-sm-4">
   <a target="_blank" href="/front/set2.png">
     <img src="/front/set2.png" alt=" " width="500" height="500">
   </a>
   <div class="desc">Aura Body Set</div>
 </div>
-
-<div class="gallery">
+<div class="col-sm-4">
   <a target="_blank" href="/front/set3.png">
     <img src="/front/set3.png" alt=" " width="500" height="500">
   </a>
   <div class="desc">Aura Makeup Set</div>
 </div>
 
-<div><br><br>
-<center><a href="{{ route(user_env().'.reviews') }}" title="Reviews"> <button class='btn btn-primary'>View Reviews here</button></a></center>
-</div>
 
 
 							</div>

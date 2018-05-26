@@ -150,4 +150,16 @@ class PagesController extends Controller
 
         return view(user_env('pages.location'), compact('classes'));
     }
+       public function transformation()
+    {
+        $classes = [];
+
+        return view(user_env('pages.transformation'), compact('classes'));
+    }
+       public function contest()
+    {
+        $classes = [];
+
+        return view(user_env('pages.contest'), compact('classes'));
+    }
 }

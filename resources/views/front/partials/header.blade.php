@@ -83,10 +83,31 @@
                                         <span>FAQs</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="{{ route(user_env().'.tutorials.index') }}">
-                                        <span>Tutorials</span>
+                                <li class="nav-item dropdown navigation">
+                                    <a href="{{ route(user_env().'.reviews') }}" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
+                                        <span>Reviews</span>
+                                        <i class="fa fa-angle-down"></i>
+                                        <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                        <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                     </a>
+                                    <ul class="dropdown-menu">
+
+                                        <li class=" dropdown li-sub-mega">
+                                            <a href="{{ route(user_env().'.transformation') }}">
+                                                <span>AuraRich Transformation</span>
+                                                <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                            </a>
+                                        </li>
+                                         <li class=" dropdown li-sub-mega">
+                                            <a href="{{ route(user_env().'.contest') }}">
+                                                <span>Before and After Contest</span>
+
+                                                <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item dropdown navigation">
                                     @auth
@@ -209,7 +230,7 @@
                         <div class="is-mobile-nav-menu nav-menu visible-xs" id="is-mobile-nav-menu">
                             <ul class="nav navbar-nav hoverMenuWrapper">
                                 <li class="nav-item dropdown navigation">
-                                    <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
+                                    <a href="{{ route(user_env().'.sellaura')}}" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
                                         <span>Sell AuraRich</span>
                                         <i class="fa fa-angle-down"></i>
                                         <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
@@ -274,10 +295,31 @@
                                         <span>FAQs</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="{{ route(user_env().'.tutorials.index') }}">
-                                        <span>Tutorials</span>
+                                 <li class="nav-item dropdown navigation">
+                                    <a href="{{ route(user_env().'.reviews') }}" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
+                                        <span>Reviews</span>
+                                        <i class="fa fa-angle-down"></i>
+                                        <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                        <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                     </a>
+                                    <ul class="dropdown-menu">
+
+                                        <li class=" dropdown li-sub-mega">
+                                            <a href="{{ route(user_env().'.transformation') }}">
+                                                <span>AuraRich Transformation</span>
+                                                <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                            </a>
+                                        </li>
+                                         <li class=" dropdown li-sub-mega">
+                                            <a href="{{ route(user_env().'.contest') }}">
+                                                <span>Before and After Contest</span>
+
+                                                <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                  <li class="nav-item dropdown navigation">
                                     @auth
