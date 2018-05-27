@@ -60,6 +60,16 @@ Route::namespace('Front')->name('front.')->group(function () {
         });
     });
 
+    Route::prefix('reservation')->name('reservation.')->group(function() {
+        Route::get('cart', 'ReservationsController@cartIndex')->name('cart.index');
+        Route::post('cart/{product}', 'ReservationsController@cartProductStore')->name('cart.product.store');
+        Route::delete('cart/{product}', 'ReservationsController@cartProductDestroy')->name('cart.product.destroy');
+        Route::delete('cart', 'ReservationsController@cartDestroy')->name('cart.destroy');
+        Route::get('user', 'ReservationsController@user')->name('user');
+        Route::post('/', 'ReservationsController@store')->name('store');
+        Route::get('review/{reservation}', 'ReservationsController@review')->name('review');
+    });
+
     Route::middleware('front.auth')->prefix('user')->group(function() {
         Route::get('/', 'DashboardController@index')->name('dashboard');
         Route::prefix('account')->name('account.')->group(function() {
