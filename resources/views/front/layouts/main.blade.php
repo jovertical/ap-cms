@@ -100,7 +100,24 @@
             padding: 15px;
             text-align: center;
         }
+        .table1 {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        font-style: italic;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
     </style>
+
 </head>
 
 <body class="{{ implode(' ', $classes ?? []) }}" style="display: none;">

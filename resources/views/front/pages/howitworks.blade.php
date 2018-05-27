@@ -54,6 +54,9 @@
 </div>    
 <br>         
              <center><h2><i><b>2 Paths to Distributorship</b></i></h2></center>
+                            <span><center>
+                 <i>We Know that not everyone is a salesperson, and to sell AuraRich products, you do NOT have to be a Salesperson to succeed. This is why we have created 2 paths for you to choose from based on your available time, initial budget, and intended involvement. </i></center>
+               </span> 
              <div>
                <center><div class="col-sm-6"><h3><i><b> Reseller Path</b></i></h3></div>
                <div class="col-sm-6"><h3><i><b> Distributor Path</b></i></h3></div>
@@ -98,8 +101,13 @@
               </div><i>
              
 
-<center><a href="{{ route(user_env().'.distributorpromotion') }}" title="Distributor Promotion"> <button class='btn btn-primary'>Distributor Promotion</button></a></center>
+<center><a href="{{ route(user_env().'.distributorpromotion') }}" title="Distributor Promotion"> <button class='btn btn-primary'>Distributor Promotion</button></a></center><br><br>
 
+              @auth
+              <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Wwg8UdHXioo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+              @else
+              <div><center><a href="{{route(user_env().'.login' )}}">Login to view the Distributor's Guide Video</a></center></div>
+              @endauth
 
 
              </div>

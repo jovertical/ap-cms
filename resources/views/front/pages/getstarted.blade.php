@@ -16,7 +16,7 @@
               <a href="{{ route(user_env().'.getstarted') }}" title="Get Started">Get Started</a>
 
             </span> <br> 
-                  
+  
           </div>
         </div>
       </div>

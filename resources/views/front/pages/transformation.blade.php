@@ -2,6 +2,97 @@
 
 @section('content')
 
+ <section class="main-slideshow">
+<div id="carousel-example" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example" data-slide-to="1"></li>
+    <li data-target="#carousel-example" data-slide-to="2"></li>
+     <li data-target="#carousel-example" data-slide-to="3"></li>
+     <li data-target="#carousel-example" data-slide-to="4"></li>
+     <li data-target="#carousel-example" data-slide-to="5"></li>
+     <li data-target="#carousel-example" data-slide-to="6"></li>
+     <li data-target="#carousel-example" data-slide-to="7"></li>
+     <li data-target="#carousel-example" data-slide-to="8"></li>
+     <li data-target="#carousel-example" data-slide-to="9"></li>
+
+
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="item active">
+      <a href="#"><img src="/front/reviews/2 (1).jpg"></a>
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+    <div class="item">
+      <a href="#"><img src="/front/reviews/2 (2).jpg"></a>
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+    <div class="item">
+      <a href="#">  <img src="/front/reviews/2 (3).jpg" /></a>
+      <div class="carousel-caption">
+       
+      </div>
+    </div>
+    <div class="item">
+      <a href="#">   <img src="/front/reviews/2 (4).jpg"></a>
+      <div class="carousel-caption">
+       
+      </div>
+    </div>
+    <div class="item">
+      <a href="#">   <img src="/front/reviews/2 (5).jpg"></a>
+      <div class="carousel-caption">
+       
+      </div>
+    </div>
+    <div class="item">
+      <a href="#">   <img src="/front/reviews/2 (6).jpg"></a>
+      <div class="carousel-caption">
+       
+      </div>
+    </div>
+    <div class="item">
+      <a href="#">   <img src="/front/reviews/2 (7).jpg"></a>
+      <div class="carousel-caption">
+       
+      </div>
+    </div>
+    <div class="item">
+      <a href="#">   <img src="/front/reviews/2 (8).jpg"></a>
+      <div class="carousel-caption">
+       
+      </div>
+    </div>
+    <div class="item">
+      <a href="#">   <img src="/front/reviews/2 (9).jpg"></a>
+      <div class="carousel-caption">
+       
+      </div>
+    </div>
+    <div class="item">
+      <a href="#">   <img src="/front/reviews/2 (10).jpg"></a>
+      <div class="carousel-caption">
+       
+      </div>
+    </div>
+    
+
+  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+    </section>
+
+
+<section>
   <div id="main-content" class="wrapper clearfix">           
     <section class="page-heading">
   <div class="page-heading-wrapper">
@@ -23,6 +114,8 @@
     </div>
   </div>
 </section>
+
+
 
 <section class="page-content">
   <div class="page-wrapper">
