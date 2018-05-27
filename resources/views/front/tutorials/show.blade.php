@@ -51,7 +51,7 @@
 									<div class="social-sharing is-clean" data-permalink="https://cs-cosmetics-store2.myshopify.com/blogs/news/124631171-playsuit-black-razor-pleats">
 
 										<a href="//www.facebook.com/sharer.php?u={{ URL::current() }}" class="share-facebook">
-											<span class="icon icon-facebook"></span>
+											<span class="fa fa-facebook"></span>
 											<span class="share-title">Share</span>
 											<span class="share-count">0</span>
 										</a>
