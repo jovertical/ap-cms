@@ -1,5 +1,14 @@
 @extends(user_env().'.layouts.main')
 
+@section('styles')
+    <style>
+        #map {
+            height: 100vh;
+            min-height: 100%;
+        }
+    </style>
+@endsection
+
 @section('content')
     @include(user_env().'.partials.breadcrumbs')
 
@@ -11,61 +20,8 @@
                         <div id="page">
 
                             <div class="page-with-contact-form">
-                                <div class="contact-detail col-md-6">
-                                    <h2>Our Address</h2>
-                                    <p>{!! $app['address'] !!} </p>
-                                    <ul class="contact-info">
-                                        <li>
-                                            <span class="left-area icon-mobile icon">
-                                                <i class="fa fa-mobile"></i>
-                                            </span>
-                                            <div class="righ-area">
-                                                <span>{{$app['phone_number_1']}}</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <span class="left-area icon-mobile icon">
-                                                <i class="fa fa-phone"></i>
-                                            </span>
-                                            <div class="righ-area">
-                                                <span>{{$app['phone_number_2']}}</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <span class="left-area icon-email icon">
-                                                <i class="fa fa-envelope-o"></i>
-                                            </span>
-                                            <div class="righ-area">
-                                                <span>{{$app['facebook_url']}}</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <span class="left-area icon-email icon">
-                                                <i class="fa fa-envelope-o"></i>
-                                            </span>
-                                            <div class="righ-area">
-                                                <span>{{$app['twitter_url']}}</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <span class="left-area icon-email icon">
-                                                <i class="fa fa-envelope-o"></i>
-                                            </span>
-                                            <div class="righ-area">
-                                                <span>{{$app['instagram_url']}}</span>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <span class="left-area icon-time icon">
-                                                <i class="fa fa-calendar"></i>
-                                            </span>
-                                            <div class="righ-area">
-                                                <span>From Monday to Friday</span>
-                                                <span>9.00 a.m to 5:00 p.m</span>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                <div class="col-md-6">
+                                    <div id="map"></div>
                                 </div>
                                 <div class="contact-form col-md-6">
                                     <h2>We will contact you back</h2>
@@ -154,4 +110,24 @@
             </div>
         </div>
     </section>
+@endsection
+
+@section('scripts')
+    <script>
+        function initMap() {
+            var aurarich_philippines = {lat: 14.8105559, lng: 120.986274};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 18,
+                center: aurarich_philippines
+            });
+            var marker = new google.maps.Marker({
+                position: aurarich_philippines,
+                map: map
+            });
+        }
+    </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_-LEz734chZ8nUmmBQhCxUa3jyJx-LVk&callback=initMap">
+    </script>
 @endsection
