@@ -62,7 +62,7 @@
 										</a>
 
 										<a target="_blank" href="//pinterest.com/pin/create/button/?url=https://cs-cosmetics-store2.myshopify.com/blogs/news/124631171-playsuit-black-razor-pleats&amp;media=http://cdn.shopify.com/s/files/1/1286/1471/articles/11_1024x1024.jpg?v=1463037789&amp;description=Playsuit%20black%20razor%20pleats" class="share-pinterest">
-											<span class="icon icon-pinterest"></span>
+											<span class="fa fa-pinterest"></span>
 											<span class="share-title">Pin it</span>
 											<span class="share-count">0</span>
 										</a>

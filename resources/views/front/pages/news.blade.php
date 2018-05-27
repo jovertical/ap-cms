@@ -16,7 +16,7 @@
               <a href="{{ route(user_env().'.news') }}" title="News">News</a>
 
             </span> <br> 
-                 
+             <span></span>    
           </div>
         </div>
       </div>

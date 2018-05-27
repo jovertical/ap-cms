@@ -56,8 +56,8 @@
                                     <div class="top"><i> {!! Str::limit($app['about'], 355) !!} </i></div>
                                     <div class="bottom">
                                         <div class="address"><i class="fa fa-home"></i> {!! $app['address'] !!} </div>
-                                        <div class="email"><i class="fa fa-envelope"></i> jessica@aurarich.com.ph </div>
-                                        <div class="email"><i class="fa fa-envelope"></i> dave@aurarich.com.ph </div>
+                                        <!--<div class="email"><i class="fa fa-envelope"></i> jessica@aurarich.com.ph </div>
+                                        <div class="email"><i class="fa fa-envelope"></i> dave@aurarich.com.ph </div>-->
                                          <div class="email"><i class="fa fa-envelope"></i> contest@aurarich.com.ph </div>
                                          <div class="email"><i class="fa fa-envelope"></i> info@aurarich.com.ph </div>
                                     </div>
