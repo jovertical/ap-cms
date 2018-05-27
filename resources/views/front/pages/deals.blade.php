@@ -33,12 +33,12 @@
             <div class="details">              
               <center><p><h3><b><i>{!! $app['deals'] !!}</i></b></h3></p></center>
               <br><br><br><br>
-              <center>
+             
   <div class="row">
-  <div class="col-sm-6"><h4><b><i> RESELLER KIT </i></b></h4> <br><br></div>
-  <div class="col-sm-6"><h4><b><i> DISTRIBUTOR PACKAGE</i></b></h4><br><br></div>
+  <div class="col-sm-12"> <center><h4><b><i> CHOOSE BETWEEN RESELLER KITS AND DISTRIBUTOR PACKAGES </i></b></h4> <br><br></center></div>
+  
 </div>
-</center>
+
 
 <center>
   <div class="row">

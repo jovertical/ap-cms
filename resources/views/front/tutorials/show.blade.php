@@ -39,7 +39,7 @@
 							</div>
 							<div class="group-blog-middle">
 								<div class="top-banner article_banner_show article-image">
-									<img src="//cdn.shopify.com/s/files/1/1286/1471/articles/11.jpg?v=1463037789" alt="" />
+									
 								</div>
 								<div id="article-content">
 									{!! $tutorial->body !!}
