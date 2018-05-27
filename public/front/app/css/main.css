@@ -1,4 +1,14 @@
-input.capitalize, textarea.capitalize, select.capitalize{
+.message-box {
+    margin-bottom:100px;
+}
+
+.message-box .message-text{
+    text-transform:uppercase;
+    font-size:20px;
+    font-weight:bold
+}
+
+.capitalize {
     text-transform: uppercase;
 }
 

@@ -2,7 +2,7 @@
 <!-- Message -->
 @if (Session::has('message'))
     @component(user_env().'.components.modal')
-        {{ Session::get('message.content') }}
+        {!! Session::get('message.content') !!}
     @endcomponent
 @endif
 
