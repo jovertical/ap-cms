@@ -39,26 +39,19 @@
 							</div>
 							<div class="group-blog-middle">
 								<div class="top-banner article_banner_show article-image">
-									<img src="//cdn.shopify.com/s/files/1/1286/1471/articles/11.jpg?v=1463037789" alt="" />
+									
 								</div>
 								<div id="article-content">
 									{!! $tutorial->body !!}
 								</div>
 							</div>
 							<div class="group-blog-btm">
-								<div class="tags-area col-sm-6">
-									<span>Tags: </span>
-
-									<a href="#" title="Show articles tagged Leather">Leather</a>,
-									<a href="#" title="Show articles tagged news">news</a>,
-									<a href="#" title="Show articles tagged vintage">vintage</a>
-								</div>
-
+								
 								<div class="share-with supports-fontface col-sm-6">
 									<div class="social-sharing is-clean" data-permalink="https://cs-cosmetics-store2.myshopify.com/blogs/news/124631171-playsuit-black-razor-pleats">
 
 										<a href="//www.facebook.com/sharer.php?u={{ URL::current() }}" class="share-facebook">
-											<span class="icon icon-facebook"></span>
+											<span class="fa fa-facebook"></span>
 											<span class="share-title">Share</span>
 											<span class="share-count">0</span>
 										</a>

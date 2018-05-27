@@ -48,7 +48,7 @@ class ProductsTableSeeder extends Seeder
 
               \App\Product::create([
             'name' => 'Aura Rich Bearberry White Booster Face',
-            'description' => 'Nourishes, moisturizes, restores youthfulness of the face to be silky smooth and clear. It removes dark spots and whitens the skin. It does not clog pores. It protect the skin from UVA & UVE rays that causes skin damage.',
+            'description' => 'Nourishes, moisturizes, restores youthfulness of the face to be silky smooth and clear. It removes dark spots and whitens the skin. It does not clog pores. It protect the skin from UVA & UVB rays that causes skin damage.',
             'price' => '111',
             'category_id' => 1,
         ]);

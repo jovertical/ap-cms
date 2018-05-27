@@ -31,8 +31,9 @@
         <div class="page-inner">
           <div id="page">
             <div class="details">              
-              <p>{!! $app['about'] !!} </p>
-            
+              <center><h2><i>Distributor Promotion</h2>
+              <p><h4>AuraRich Rewards hardwork, not only by tour incentives but also by promotion. AuraRich Philippine will train qualified Distributors to become one of our sales team leader and support them in building their own team.</i></h4></p></center><br><br>
+              <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Wwg8UdHXioo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
             </div>
           </div>
         </div>
