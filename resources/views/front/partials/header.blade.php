@@ -24,7 +24,6 @@
                                         <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-
                                         <li class=" dropdown li-sub-mega">
                                             <a href="{{ route(user_env().'.getstarted') }}">
                                                 <span>Get Started</span>
@@ -78,11 +77,6 @@
                                         <span>Distributors</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="{{ route(user_env().'.faqs') }}">
-                                        <span>FAQs</span>
-                                    </a>
-                                </li>
                                 <li class="nav-item dropdown navigation">
                                     <a href="{{ route(user_env().'.reviews') }}" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
                                         <span>Reviews</span>
@@ -103,6 +97,28 @@
                                             <a href="{{ route(user_env().'.contest') }}">
                                                 <span>Before and After Contest</span>
 
+                                                <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown navigation">
+                                    <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
+                                        <span>Reservation</span>
+                                        <i class="fa fa-angle-down"></i>
+                                        <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                        <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class=" dropdown li-sub-mega">
+                                            <a href="{{ route(user_env().'.reservation.cart.index') }}">
+                                                <span>My cart</span>
+                                                @if ($products = session()->get('reservation.selected_products'))
+                                                    <span style="float: right;">
+                                                        ({{ count($products) }})
+                                                    </span>
+                                                @endif
                                                 <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
                                                 <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                             </a>
@@ -167,8 +183,6 @@
                                 </li>
                             </ul>
                         </div>
-
-
 
                         <div class="mobile-top-navigation visible-xs">
                             <button id="showLeftPush" class="visible-xs">
@@ -290,11 +304,28 @@
                                         <span>Distributors</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="{{ route(user_env().'.faqs') }}">
-                                        <span>FAQs</span>
+
+                                <li class="nav-item dropdown navigation">
+                                    <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
+                                        <span>Reservation</span>
+                                        <i class="fa fa-angle-down"></i>
+                                        <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                        <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                     </a>
+                                    <ul class="dropdown-menu">
+                                        <li class=" dropdown li-sub-mega">
+                                            <a href="{{ route(user_env().'.reservation.cart.index') }}">
+                                                <span>My cart</span>
+                                                @if ($products = session()->get('reservation.selected_products'))
+                                                    <span style="float: right;">
+                                                        ({{ count($products) }})
+                                                    </span>
+                                                @endif
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
+
                                  <li class="nav-item dropdown navigation">
                                     <a href="{{ route(user_env().'.reviews') }}" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
                                         <span>Reviews</span>

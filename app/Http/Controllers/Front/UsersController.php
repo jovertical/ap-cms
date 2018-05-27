@@ -22,7 +22,7 @@ class UsersController extends Controller
 {
     public function index(Request $request)
     {
-        $distributors = User::where('type', 'user');
+        $distributors = User::where('type', 'user')->where('active', 1)->where('verified', 1);
 
         if ($address = $request->get('a')) {
             $distributors = $distributors->where('address', 'LIKE', '%'.$address.'%');

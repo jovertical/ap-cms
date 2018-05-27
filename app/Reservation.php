@@ -15,9 +15,19 @@ class Reservation extends Model
         });
     }
 
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
     public function products()
     {
-        return $this->hasMany(ReservaationProduct::class);
+        return $this->hasMany(ReservationProduct::class);
+    }
+
+    public function createProduct(array $attributes)
+    {
+        return $this->products()->create($attributes);
     }
 
     public function setSourceAttribute($value)

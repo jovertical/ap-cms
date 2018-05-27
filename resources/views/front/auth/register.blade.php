@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="page-heading-inner">
                         <h1 class="page-title">
-                            <span>Be a distributor!</span>
+                            <span>Join us now!</span>
                         </h1>
                     </div>
                 </div>
@@ -24,6 +24,27 @@
 							<div id="register">
 								<form method="POST" action="{{ route(user_env().'.register') }}">
 									@csrf
+
+									<!-- Type -->
+									<div class="clearfix large_form">
+										<p class="field">
+											<label for="sub_type" class="label">
+												Type <span class="text-danger">*</span>
+											</label>
+
+											<select name="sub_type" id="sub_type" class="select capitalize">
+												<option value="" selected disabled>Pleas select a type</option>
+												<option value="distributor">Distributor</option>
+												<option value="reseller">Reseller</option>
+											</select>
+										</p>
+
+										@if ($errors->has('sub_type'))
+											<div class="mb-2 text-left">
+												<span class="text-danger">{{ $errors->first('sub_type') }}</span>
+											</div>
+										@endif
+									</div>
 
 									<!-- Firstname -->
 									<div class="clearfix large_form">

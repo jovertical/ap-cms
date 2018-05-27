@@ -90,6 +90,16 @@ class User extends Authenticatable
         return $this->belongsTo(User::class, 'deleted_by');
     }
 
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class);
+    }
+
+    public function createReservation(array $attributes)
+    {
+        return $this->reservations()->create($attributes);
+    }
+
     public function getRouteKeyName()
     {
         return 'slug';
@@ -123,6 +133,16 @@ class User extends Authenticatable
         }
 
         return ucfirst($alias);
+    }
+
+    public function setSubTypeAttribute($value)
+    {
+        $this->attributes['sub_type'] = strtolower($value);
+    }
+
+    public function getSubTypeAttribute($value)
+    {
+        return ucfirst($value);
     }
 
     public function setFirstNameAttribute($value)

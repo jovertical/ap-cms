@@ -102,15 +102,21 @@ Route::namespace('Root')->prefix('su')->name('root.')->group(function () {
             Route::patch('/{newsletter}/toggle', 'NewslettersController@toggle')->name('toggle');
         });
 
-        Route::prefix('settings')->name('settings.')->group(function() {
-            Route::get('/', 'SettingsController@index')->name('index');
-            Route::patch('/', 'SettingsController@update')->name('update');
-        });
-
         Route::resource('news', 'NewsController');
         Route::prefix('news')->name('news.')->group(function() {
             Route::get('datatables/index', 'NewsController@datatables')->name('datatables.index');
             Route::patch('/{news}/toggle', 'NewsController@toggle')->name('toggle');
+        });
+
+        Route::prefix('reservations')->name('reservations.')->group(function() {
+            Route::get('/', 'ReservationsController@index')->name('index');
+            Route::patch('{reservation}', 'ReservationsController@update')->name('update');
+            Route::get('{reservation}', 'ReservationsController@show')->name('show');
+        });
+
+        Route::prefix('settings')->name('settings.')->group(function() {
+            Route::get('/', 'SettingsController@index')->name('index');
+            Route::patch('/', 'SettingsController@update')->name('update');
         });
 
         Route::patch('/notification/{user}', function(\App\User $user) {
