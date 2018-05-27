@@ -99,7 +99,7 @@
                                             </label>
 
                                             <select name="province" id="province" class="select capitalize"
-                                                data-old="{{ old('province') ?? explode('|', $user->address)[0] }}">
+                                                data-old="{{ old('province') ?? $user->province }}">
                                             </select>
                                         </p>
 
@@ -118,7 +118,7 @@
                                             </label>
 
                                             <select name="city" id="city" class="select capitalize" disabled="true"
-                                                data-old="{{ old('city') ?? explode('|', $user->address)[1] }}">
+                                                data-old="{{ old('city') ?? $user->city }}">
                                             </select>
                                         </p>
 
@@ -137,7 +137,7 @@
                                             </label>
 
                                             <select name="district" id="district" class="select capitalize" disabled="true"
-                                                data-old="{{ old('district') ?? explode('|', $user->address)[2] }}">
+                                                data-old="{{ old('district') ?? $user->district }}">
                                             </select>
                                         </p>
 

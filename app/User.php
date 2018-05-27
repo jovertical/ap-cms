@@ -178,4 +178,19 @@ class User extends Authenticatable
     {
         return ucfirst($value);
     }
+
+    public function getProvinceAttribute($value)
+    {
+        return optional(explode('|', $this->attributes['address']))[0];
+    }
+
+    public function getCityAttribute($value)
+    {
+        return optional(explode('|', $this->attributes['address']))[1];
+    }
+
+    public function getDistrictAttribute($value)
+    {
+        return optional(explode('|', $this->attributes['address']))[2];
+    }
 }

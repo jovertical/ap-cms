@@ -13,7 +13,6 @@ Route::namespace('Front')->name('front.')->group(function () {
     Route::get('/distributorpromotion', 'PagesController@distributorpromotion')->name('distributorpromotion');
     Route::get('/deals', 'PagesController@deals')->name('deals');
     Route::get('/news', 'PagesController@news')->name('news');
-    Route::get('/distributors', 'PagesController@distributors')->name('distributors');
     Route::get('/reviews', 'PagesController@reviews')->name('reviews');
     Route::get('/location', 'PagesController@location')->name('location');
     Route::get('/transformation', 'PagesController@transformation')->name('transformation');
@@ -31,6 +30,11 @@ Route::namespace('Front')->name('front.')->group(function () {
 
     Route::prefix('tutorials/{tutorial}/episodes')->name('episodes.')->group(function() {
         Route::get('/{number}', 'EpisodesController@show')->name('show');
+    });
+
+    Route::prefix('distributors')->name('distributors.')->group(function() {
+        Route::get('/', 'UsersController@index')->name('index');
+        Route::get('/{user}', 'UsersController@show')->name('show');
     });
 
     Route::namespace('Auth')->group(function() {

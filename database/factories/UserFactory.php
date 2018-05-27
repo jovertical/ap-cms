@@ -17,6 +17,8 @@ $factory->define(App\User::class, function (Faker $faker) {
     return [
         'slug' => str_random(10),
         'name' => strtolower($faker->firstName).'.'.mt_rand(100, 999),
+        'address' => implode('|', explode(', ', $faker->address)),
+        'contact_number' => $faker->phoneNumber,
         'email' => $faker->unique()->safeEmail,
         'password' => bcrypt('secret'),
         'verified' => 1

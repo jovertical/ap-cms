@@ -70,7 +70,7 @@
                                         <li>
                                             <a href="/{{ route(user_env().'.reviews') }}"><span>Reviews</span></a>
                                         </li>
-                                        
+
                                         <li>
                                             <a href="/pages/contact"><span>Privacy policy</span></a>
                                         </li>
@@ -86,8 +86,8 @@
                                             <a href="{{ route(user_env().'.contact') }}"><span>Contact us</span></a>
                                         </li>
                                     </ul>
-                        
-                                  
+
+
                                 </div>
                             </div>
                         </div>
@@ -125,7 +125,7 @@
                                         <i class="">/</i>
                                     </li>
                                     <li>
-                                        <a href="{{ route(user_env().'.distributors') }}" title="Distributors">Distributors</a>
+                                        <a href="{{ route(user_env().'.distributors.index') }}" title="Distributors">Distributors</a>
                                         <i class="">/</i>
                                     </li>
                                     <li>
@@ -140,7 +140,7 @@
                                         <a href="{{ route(user_env().'.reviews') }}" title="Reviews">Reviews</a>
                                         <i class="">/</i>
                                     </li>
-                                   
+
                                 </ul>
                             </div>
 

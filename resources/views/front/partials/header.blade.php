@@ -74,7 +74,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route(user_env().'.distributors') }}">
+                                    <a href="{{ route(user_env().'.distributors.index') }}">
                                         <span>Distributors</span>
                                     </a>
                                 </li>
@@ -286,7 +286,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route(user_env().'.distributors') }}">
+                                    <a href="{{ route(user_env().'.distributors.index') }}">
                                         <span>Distributors</span>
                                     </a>
                                 </li>
