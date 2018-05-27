@@ -5,7 +5,7 @@ namespace App\Mail;
 /**
  * Models
  */
-use App\{Newsletter};
+use App\{Newsletter as NewsletterModel};
 
 /**
  * Laravel
@@ -15,7 +15,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class NewsletterMessage extends Mailable
+class Newsletter extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -29,7 +29,7 @@ class NewsletterMessage extends Mailable
      *
      * @return void
      */
-    public function __construct(Newsletter $newsletter)
+    public function __construct(NewsletterModel $newsletter)
     {
         $this->newsletter = $newsletter;
     }
@@ -50,7 +50,7 @@ class NewsletterMessage extends Mailable
                 'as' => $this->newsletter->file_name
             ]);
         }
-        
+
         return $newsletter;
     }
 }

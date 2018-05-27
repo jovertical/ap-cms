@@ -13,7 +13,6 @@ Route::namespace('Front')->name('front.')->group(function () {
     Route::get('/distributorpromotion', 'PagesController@distributorpromotion')->name('distributorpromotion');
     Route::get('/deals', 'PagesController@deals')->name('deals');
     Route::get('/news', 'PagesController@news')->name('news');
-    Route::get('/distributors', 'PagesController@distributors')->name('distributors');
     Route::get('/reviews', 'PagesController@reviews')->name('reviews');
     Route::get('/location', 'PagesController@location')->name('location');
     Route::get('/transformation', 'PagesController@transformation')->name('transformation');
@@ -33,8 +32,14 @@ Route::namespace('Front')->name('front.')->group(function () {
         Route::get('/{number}', 'EpisodesController@show')->name('show');
     });
 
+    Route::prefix('distributors')->name('distributors.')->group(function() {
+        Route::get('/', 'UsersController@index')->name('index');
+        Route::get('/{user}', 'UsersController@show')->name('show');
+    });
+
     Route::namespace('Auth')->group(function() {
-        Route::post('subscribe', 'NewsletterController@subscribe')->name('subscribe');
+        Route::post('subscribe', 'NewsletterController@store')->name('newsletter.store');
+        Route::post('message', 'MessageController@store')->name('message.store');
 
         Route::middleware('front.guest')->group(function() {
             Route::get('register', 'RegisterController@showRegisterForm')->name('register');

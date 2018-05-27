@@ -23,7 +23,7 @@
                                     newsletter to receive emails from {{ $app['name'] }} automatically.
                                 </div>
                                 <div class="footer-newsletter-content">
-                                    <form method="POST" action="{{ route(user_env().'.subscribe') }}">
+                                    <form method="POST" action="{{ route(user_env().'.newsletter.store') }}">
                                         @csrf
 
                                         <input type="email" name="email" id="email" value="{{ old('email') }}"
@@ -71,7 +71,7 @@
                                         <li>
                                             <a href="/{{ route(user_env().'.reviews') }}"><span>Reviews</span></a>
                                         </li>
-                                        
+
                                         <li>
                                             <a href="/pages/contact"><span>Privacy policy</span></a>
                                         </li>
@@ -84,8 +84,8 @@
                                             <a href="{{ route(user_env().'.contact') }}"><span>Contact us</span></a>
                                         </li>
                                     </ul>
-                        
-                                  
+
+
                                 </div>
                             </div>
                         </div>
@@ -123,7 +123,7 @@
                                         <i class="">/</i>
                                     </li>
                                     <li>
-                                        <a href="{{ route(user_env().'.distributors') }}" title="Distributors">Distributors</a>
+                                        <a href="{{ route(user_env().'.distributors.index') }}" title="Distributors">Distributors</a>
                                         <i class="">/</i>
                                     </li>
                                     <li>
@@ -138,7 +138,7 @@
                                         <a href="{{ route(user_env().'.reviews') }}" title="Reviews">Reviews</a>
                                         <i class="">/</i>
                                     </li>
-                                   
+
                                 </ul>
                             </div>
 
@@ -174,7 +174,7 @@
 <div id="newsletter-popup" class="modal fade" style="display: none;" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="nl-wraper-popup bounceInDown" style="background-image: url(/front/cdn.shopify.com/s/files/1/1286/1471/t/2/assets/mailing_bg.png?17231127553059638277)">
         <div class="nl-wraper-popup-inner">
-            <form method="POST" action="{{ route(user_env().'.subscribe') }}">
+            <form method="POST" action="{{ route(user_env().'.newsletter.store') }}">
                 @csrf
 
                 <h4>EMAIL FOR NEWSLETTER</h4>

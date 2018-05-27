@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Front\Auth;
 
-/** 
+/**
  * Jobs
  */
 use App\Jobs\{SendNewsletter};
@@ -21,7 +21,7 @@ use App\Http\Controllers\Controller;
 
 class NewsletterController extends Controller
 {
-    public function subscribe(Request $request)
+    public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'email' => 'required|email|unique:newsletter_subscribers|max:255'

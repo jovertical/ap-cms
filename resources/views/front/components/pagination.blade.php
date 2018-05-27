@@ -39,7 +39,7 @@
                         @endforeach
                     @endif
                 @endforeach
-            
+
                 {{-- Next Page Link --}}
                 @if ($paginator->hasMorePages())
                     <li class="next">
