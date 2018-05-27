@@ -5,12 +5,7 @@ namespace App\Jobs;
 /**
  * Mails
  */
-use App\Mail\{Newsletter as NewsletterMessage};
-
-/**
- * Models
- */
-use App\{Newsletter};
+use App\Mail\{Message as MailMessage};
 
 /**
  * Laravel
@@ -22,29 +17,23 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 
-class SendNewsletter implements ShouldQueue
+class SendMessage implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     /**
-     * The subscribers' email.
+     * The message data.
      */
-    protected $email;
-
-    /**
-     * Newsletter instance.
-     */
-    protected $newsletter;
+    protected $data;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct(string $email, Newsletter $newsletter)
+    public function __construct(array $data)
     {
-        $this->email = $email;
-        $this->newsletter = $newsletter;
+        $this->data = $data;
     }
 
     /**
@@ -54,8 +43,8 @@ class SendNewsletter implements ShouldQueue
      */
     public function handle()
     {
-        Mail::to($this->email)->send(
-            new NewsletterMessage($this->newsletter)
+        Mail::to(env('MAIL_RECIEVER'))->send(
+            new MailMessage($this->data)
         );
     }
 }

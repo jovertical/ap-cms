@@ -38,7 +38,8 @@ Route::namespace('Front')->name('front.')->group(function () {
     });
 
     Route::namespace('Auth')->group(function() {
-        Route::post('subscribe', 'NewsletterController@subscribe')->name('subscribe');
+        Route::post('subscribe', 'NewsletterController@store')->name('newsletter.store');
+        Route::post('message', 'MessageController@store')->name('message.store');
 
         Route::middleware('front.guest')->group(function() {
             Route::get('register', 'RegisterController@showRegisterForm')->name('register');

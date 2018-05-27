@@ -22,7 +22,7 @@
 					<div class="register-inner">
 						<div id="customer-register">
 							<div id="register">
-								<form method="POST" action="{{ route(user_env().'.register') }}" novalidate>
+								<form method="POST" action="{{ route(user_env().'.register') }}">
 									@csrf
 
 									<!-- Firstname -->
