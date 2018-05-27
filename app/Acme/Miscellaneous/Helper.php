@@ -73,6 +73,14 @@ if (! function_exists('create_password')) {
     }
 }
 
+if (! function_exists('create_padded_counter')) {
+    function create_padded_counter($counter) {
+        $length = strlen($counter);
+
+        return str_pad($counter, $length > 4 ? $length : 4, '0', STR_PAD_LEFT);
+    }
+}
+
 if (! function_exists('create_filename')) {
     function create_filename(string $ext) {
         return str_random(25).'.'.$ext;
@@ -90,7 +98,7 @@ if (! function_exists('image_url')) {
 
                     case 'resized':
                             $file_url = "{$model->file_directory}/resized/{$model->file_name}";
-                        break;             
+                        break;
 
                     default:
                             $file_url = "{$model->file_directory}/{$model->file_name}";

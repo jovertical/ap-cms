@@ -15,6 +15,11 @@
             <span>{{ implode(', ', explode('|', $distributor->address)) }}</span>
         </li>
 
+        <li>
+            <i class="fa fa-user"></i>
+            {{ $distributor->sub_type }}
+        </li>
+
         @auth
             <li>
                 <i class="fa fa-envelope"></i>
@@ -34,10 +39,5 @@
         @endauth
     </ul>
 
-    <div class="article-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Quidem alias ea rem officia ipsa. Quia numquam cupiditate
-        possimus atque odio, aperiam delectus? Unde necessitatibus
-        quam deserunt perferendis veritatis doloremque eos.
-    </div>
+    <div class="article-content"></div>
 </div>

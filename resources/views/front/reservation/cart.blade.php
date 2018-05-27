@@ -11,7 +11,11 @@
                         <div id="cart">
                             @if (count($selected_products) == 0)
                                 <div class="message-box text-center">
-                                    <h2 class="message-text">Your cart is currently empty.</h2>
+                                    <h2 class="message-text">Your cart is currently empty.
+                                        <a href="{{ route(user_env().'.products.index') }}">
+                                            <u>See products</u>
+                                        </a>
+                                    </h2>
                                 </div>
                             @else
                                 <div class="cart-form">
@@ -78,13 +82,26 @@
                                         </tbody>
                                     </table>
 
-                                    <div class="group-checkout-input">
-                                        <div class="cart-buttons">
-                                            <div class="buttons clearfix">
-                                                <input type="submit" class="btn" value="Check Out">
+                                    @auth
+                                        <form method="POST" action="{{ route(user_env().'.reservation.store') }}" class="cartform">
+                                            @csrf
+
+                                            <div class="cart-buttons">
+                                                <div class="buttons clearfix">
+                                                    <input type="submit" class="btn" value="Check Out">
+                                                </div>
                                             </div>
+                                        </form>
+                                    @else
+                                        <div class="message-box text-center">
+                                            <h2 class="message-text">You must be
+                                                <a href="{{ route(user_env().'.login') }}">
+                                                    <u>logged-in</u>
+                                                </a>
+                                                to continue checkout.
+                                            </h2>
                                         </div>
-                                    </div>
+                                    @endauth
                                 @endif
                             </div>
                         </div>

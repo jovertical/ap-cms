@@ -10,12 +10,17 @@ use Carbon;
 /**
  * Repositories
  */
-use App\Acme\Repositories\{CategoryRepository, ProductRepository};
+use App\Acme\Repositories\{UserRepository, ProductRepository};
+
+/**
+ * Notifications
+ */
+use App\Notifications\{ResourceCreated, ResourceUpdated, ResourceDeleted};
 
 /**
  * Models
  */
-use App\{Category, Product};
+use App\{Reservation, Product};
 
 /**
  * Laravel
@@ -25,6 +30,18 @@ use App\Http\Controllers\Controller;
 
 class ReservationsController extends Controller
 {
+    /**
+     * User Repository
+     * @var object
+     */
+    protected $user_repo;
+
+    public function __construct(
+        UserRepository $user_repo
+    ) {
+        $this->user_repo = $user_repo;
+    }
+
     /**
      * Get the selected products.
      * @return array
@@ -145,5 +162,62 @@ class ReservationsController extends Controller
         ]);
 
         return back();
+    }
+
+    public function store(Request $request)
+    {
+        $user = auth()->user();
+        $reservation_products = $this->getSelectedProducts();
+        $product_costs = $this->getProductCosts();
+
+        try {
+            // create reservation.
+            $reservation = $user->createReservation([
+                'number' => create_padded_counter(Reservation::count()),
+                'amount_payable' => $product_costs['amount_payable']
+            ]);
+
+            // create reservation products.
+            foreach ($reservation_products as $product) {
+                $reservation->createProduct([
+                    'product_id' => $product->id,
+                    'amount_original' => $product->price,
+                    'amount_payable' => $product->price
+                ]);
+            }
+
+            // notify superusers.
+            $this->user_repo->superusers()->each(function($notifiable) use ($reservation) {
+                $notifiable->notify(
+                    new ResourceCreated(
+                        auth()->user(),
+                        $reservation,
+                        route('root.reservations.show', $reservation)
+                    )
+                );
+            });
+
+            // pull reservation data.
+            session()->pull('reservation');
+
+            return redirect()->route(user_env().'.reservation.review', $reservation);
+        } catch (Exception $e) {
+            session()->flash('message', [
+                'type' => 'error',
+                'content' => $e->getMessage()
+            ]);
+        }
+
+        return back();
+    }
+
+    /**
+     * Show reservation review.
+     * @param Reservation $reservation
+     * @return view
+     */
+    public function review(Reservation $reservation)
+    {
+        return view(user_env().'.reservation.review', compact('reservation'));
     }
 }

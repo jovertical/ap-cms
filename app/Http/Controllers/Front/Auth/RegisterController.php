@@ -39,6 +39,7 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         $this->validate($request, [
+            'sub_type' => 'required',
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'birthdate' => 'required|date|before:18 years ago',
@@ -62,6 +63,7 @@ class RegisterController extends Controller
         $password = $request->input('password');
 
         $user = new User;
+        $user->sub_type = $request->input('sub_type');
         $user->first_name = $request->input('first_name');
         $user->last_name = $request->input('last_name');
         $user->birthdate = $request->input('birthdate');
