@@ -1,3 +1,4 @@
+
 <!-- Message -->
 @if (Session::has('message'))
     @component(user_env().'.components.modal')
@@ -52,7 +53,7 @@
                             <div class="footer-block01 about-us col-ms-5 col-md-5">
                                 <div class="footer-title "><h5>About us</h5></div>
                                 <div class="fi-aboutus-content">
-                                    <div class="top"><i>{!! Str::limit($app['about'], 455) !!}</i></div>
+                                    <div class="top"><i> {!! Str::limit($app['about'], 355) !!} </i></div>
                                     <div class="bottom">
                                         <div class="address"><i class="fa fa-home"></i> {!! $app['address'] !!} </div>
                                         <div class="email"><i class="fa fa-envelope"></i> jessica@aurarich.com.ph </div>
@@ -78,9 +79,6 @@
                                     <ul class="fi-right col-sm-6">
                                         <li>
                                             <a href="{{ route(user_env().'.location') }}"><span>Store Location</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route(user_env().'.location') }}"><span>Site Map</span></a>
                                         </li>
                                         <li>
                                             <a href="{{ route(user_env().'.contact') }}"><span>Contact us</span></a>

@@ -286,6 +286,12 @@
                                                 <span class="m-menu__link-text">Products</span>
                                             </a>
                                         </li>
+                                        <li class="m-menu__item" aria-haspopup="true">
+                                            <a href="{{ route(user_env().'.deals.index') }}" class="m-menu__link">
+                                                <i class="m-menu__link-icon flaticon-business"></i>
+                                                <span class="m-menu__link-text">Deals</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>

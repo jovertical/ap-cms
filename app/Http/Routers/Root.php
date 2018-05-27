@@ -73,6 +73,18 @@ Route::namespace('Root')->prefix('su')->name('root.')->group(function () {
             });
         });
 
+        Route::resource('deals', 'DealsController');
+        Route::prefix('deals')->name('deals.')->group(function() {
+            Route::get('datatables/index', 'DealsController@datatables')->name('datatables.index');
+            Route::patch('/{deal}/toggle', 'DealsController@toggle')->name('toggle');
+            Route::prefix('images')->name('images.')->group(function() {
+                Route::get('/{deal}', 'DealsController@imageIndex')->name('index');
+                Route::get('/{deal}/create', 'DealsController@imageCreate')->name('create');
+                Route::post('/{deal}', 'DealsController@imageStore')->name('store');
+                Route::delete('/{deal}', 'DealsController@imageDestroy')->name('destroy');
+            });
+        });
+
         Route::resource('tutorials', 'TutorialsController');
         Route::prefix('tutorials')->name('tutorials.')->group(function() {
             Route::get('datatables/index', 'TutorialsController@datatables')->name('datatables.index');

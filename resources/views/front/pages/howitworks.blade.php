@@ -67,7 +67,7 @@
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp This path may be more suitable for those who wish to initially work underneath an AuraRich Distributor, and supplement their income while testing out the AuraRich system. This path requires smaller initial investment and enables you to fast-track into the Distributor system yourself after you’ve been able to learn the system and build your confidence. <br><br>
 
 <center><b><h3>Step 1 : Register </b></h3><br></center>
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp This will include providing your name, email, contact number, shipping address and agreeing to our Terms and Conditions.<br> <br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp This will include providing your Name, Email, Contact Number, Shipping Address and agreeing to our Terms and Conditions.<br> <br>
 
 <center><b><h3>Step 2 : Purchase</b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Purchase any of our 3 AuraRich Reseller Package Deals including 3 of each of our all natural AuraRich products at a 15% discount from retail and start making sales profit immediately. <br></p>
 
@@ -78,7 +78,7 @@
 </div>
               <div class="col-sm-6"> 
               <center><b><p> Path B: Distributor Path <br></b></center>
-
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp This Path may be more suitable for those who wish to distribute the products on a larger quantity. This path requires knowledge, experience, and leadership skills. Aurarich Philippines will provide training. incentives, and rewards for qualified distributors.<br><br><br>
 <center><b><h3>Step 1: Register </b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp This will include providing your name, email, contact number, shipping address and agreeing to our Terms and Conditions. <br><br>
 
 <center><b><h3> Step 2: Purchase </b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Purchase any of our AuraRich Distributor Packages including 3 of each of our all natural AuraRich products at a 15% discount from retail and start making sales profit immediately. <br>
