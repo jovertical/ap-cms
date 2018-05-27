@@ -46,14 +46,7 @@
 								</div>
 							</div>
 							<div class="group-blog-btm">
-								<div class="tags-area col-sm-6">
-									<span>Tags: </span>
-
-									<a href="#" title="Show articles tagged Leather">Leather</a>,
-									<a href="#" title="Show articles tagged news">news</a>,
-									<a href="#" title="Show articles tagged vintage">vintage</a>
-								</div>
-
+								
 								<div class="share-with supports-fontface col-sm-6">
 									<div class="social-sharing is-clean" data-permalink="https://cs-cosmetics-store2.myshopify.com/blogs/news/124631171-playsuit-black-razor-pleats">
 
