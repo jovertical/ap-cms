@@ -57,13 +57,13 @@
       </div>
     </div>
     <div class="item">
-      <a href="#">   <img src="/front/reviews/2 (7).jpg"></a>
+      <a href="#">   <img src="/front/reviews/2 (7).JPG"></a>
       <div class="carousel-caption">
        
       </div>
     </div>
     <div class="item">
-      <a href="#">   <img src="/front/reviews/2 (8).jpg"></a>
+      <a href="#">   <img src="/front/reviews/2 (8).JPG"></a>
       <div class="carousel-caption">
        
       </div>
