@@ -31,7 +31,7 @@
         <div class="page-inner">
           <div id="page">
             <div class="details">              
-              <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <i> AuraRich is offering gold point building incentive opportunities to those Distributors and Customers who submit photos of themselves Before and After using AuraRich products. Winners will be chosen on a monthly basis and will be displayed on our site and in our monthly news letter. Submit photos and a statement of  how you enjoy AuraRich to contest@aurarich.com.ph </i>  </p>
+              <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <i> AuraRich is offering gold point building incentive opportunities to those Distributors and Customers who submit photos of themselves Before and After using AuraRich products. Winners will be chosen on a monthly basis and will be displayed on our site and in our monthly news letter. <br> <br>Submit photos and a statement of  how you enjoy AuraRich to contest@aurarich.com.ph </i>  </p>
             
             </div>
           </div>

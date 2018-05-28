@@ -73,7 +73,7 @@
         <div class="page-inner">
           <div id="page">
             <div class="details">              
-             <i> <p>{!! $app['about'] !!} </p></i>
+             <i><p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{!! $app['about'] !!} </p></i>
                 <center><a href="{{ route(user_env().'.reviews') }}" title="Reviews"> <button class='btn btn-primary'>View Reviews</button></a></center>
             </div>
           </div>

@@ -209,6 +209,12 @@
             <div class="desc">AuraRich Transformation 12</div>
             </div>
 
+            <div class="col-sm-12">
+  
+            <center><br><br><a href="{{ route(user_env().'.contest') }}" title="Before and After Contest"> <button class='btn btn-primary'>Before and After Contest</button></a></center><br><br>
+
+            </div>
+
             </div>
           </div>
         </div>

@@ -32,7 +32,7 @@
           <div id="page">
             <div class="details">              
               <center><h2><i>Distributor Promotion</h2>
-              <p><h4>AuraRich Rewards hardwork, not only by tour incentives but also by promotion. AuraRich Philippine will train qualified Distributors to become one of our sales team leader and support them in building their own team.</i></h4></p></center><br><br>
+              <p><h4>AuraRich rewards hard work not only by Tour Incentives but also by Promotions. AuraRich Philippines will train Qualified Distributors to become one of our Sales Team Leader.</i></h4></p></center><br><br>
 
               
                <div class="col-sm-6">
@@ -48,7 +48,10 @@
               </a>
               <div class="desc"></div>
             </div>
-           
+            
+            <div class="col-sm-12">
+            <center><a href="{{ route(user_env().'.system') }}" title="Gold Point Incentives"> <button class='btn btn-primary'>Gold Point Incentives</button></a></center><br><br>
+            </div>
                    
             </div>
           </div>

@@ -78,6 +78,12 @@
     </center>
 </div>
 </i>
+<div class="col-sm-12">
+  <br><br>
+  <center><a href="{{ route(user_env().'.tutorials.index') }}" title="Tutorials"> <button class='btn btn-primary'>Tutorials</button></a></center><br><br>
+
+</div>
+
 
 
             </div>

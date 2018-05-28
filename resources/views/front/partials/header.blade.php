@@ -122,6 +122,11 @@
                                                 <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                             </a>
                                         </li>
+                                        <li class="nav-item">
+                                            <a href="{{ route(user_env().'.news') }}">
+                                                <span>News</span>
+                                            </a>
+                                        </li>
                                         <li class=" dropdown li-sub-mega">
                                             <a href="{{ route(user_env().'.faqs') }}">
                                                 <span>FAQs</span>
@@ -129,13 +134,6 @@
                                                 <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                             </a>
                                         </li>
-
-                                        <li class="nav-item">
-                                            <a href="{{ route(user_env().'.news') }}">
-                                                <span>News</span>
-                                            </a>
-                                        </li>
-                                         
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown navigation">

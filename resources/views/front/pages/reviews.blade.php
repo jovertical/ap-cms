@@ -49,6 +49,12 @@
   </div>
 </div>
 
+<div class="col-sm-12">
+  
+<center><a href="{{ route(user_env().'.transformation') }}" title="AuraRich Transformation"> <button class='btn btn-primary'>AuraRich Transformation</button></a></center><br><br>
+
+</div>
+
           
   </div>  
 

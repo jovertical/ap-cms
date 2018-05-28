@@ -69,7 +69,7 @@
                                     <ul class="fi-left col-sm-6">
 
                                         <li>
-                                            <a href="/{{ route(user_env().'.reviews') }}"><span>Reviews</span></a>
+                                            <a href="{{ route(user_env().'.reviews') }}"><span>Reviews</span></a>
                                         </li>
 
                                         <li>

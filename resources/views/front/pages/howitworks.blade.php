@@ -72,9 +72,9 @@
 <center><b><h3>Step 1 : Register </b></h3><br></center>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp This will include providing your Name, Email, Contact Number, Shipping Address and agreeing to our Terms and Conditions.<br> <br>
 
-<center><b><h3>Step 2 : Purchase</b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Purchase any of our 3 AuraRich Reseller Package Deals including 3 of each of our all natural AuraRich products at a 15% discount from retail and start making sales profit immediately. <br></p>
+<center><b><h3>Step 2 : Purchase</b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Purchase each one of our 3 AuraRich Reseller Package Deals including All our natural AuraRich products at a 15% discount from retail and start making sales profit immediately.<br></p>
 
-<center><b><h3>Step 3 : Sell </b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp If you follow our price structure, you will make a 17% return on each of these investments. <br></p>
+<center><b><h3>Step 3 : Sell </b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspThis will be your sampler kit. Sell to your friends and family, or provide samples to interested buyers and begin to grow your business. If you follow our price structure, you will make a 17% return on this first investment.<br></p>
 
 
 
@@ -84,15 +84,15 @@
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp This Path may be more suitable for those who wish to distribute the products on a larger quantity. This path requires knowledge, experience, and leadership skills. Aurarich Philippines will provide training. incentives, and rewards for qualified distributors.<br><br><br>
 <center><b><h3>Step 1: Register </b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp This will include providing your name, email, contact number, shipping address and agreeing to our Terms and Conditions. <br><br>
 
-<center><b><h3> Step 2: Purchase </b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Purchase any of our AuraRich Distributor Packages including 3 of each of our all natural AuraRich products at a 15% discount from retail and start making sales profit immediately. <br>
+<center><b><h3> Step 2: Purchase </b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspPurchase each one of our 3 AuraRich Reseller Package Deals including All our natural AuraRich products at a 15% discount from retail and start making sales profit immediately. <br>
 
 <center><b><h3> Step 3: Sell </b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Sell to your friends and family, or provide samples to interested resellers and begin to grow your sales team. If you follow our price structure, you will make a 19% return on this first investment. <br><br>
 
-<center><b><h3> Step 4: Training </b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Now that you’ve proved your interest in being an authorized AuraRich Distributor, you will be able to undergo training with AuraRich experienced trainers.<br><br>
+<center><b><h3> Step 4: Training </b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Now that you’ve proved your interest in being an authorized AuraRich Distributor, You will be trained by an experienced AuraRich trainers to develop your potential as an individual<br><br>
 
 <center><b><h3> Step 5: Build </b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp You may now use your experience and training to build your own team. You must have minimum of 6 resellers to move on to the final phase of becoming an AuraRich Distributor.<br><br>
 
-<center><b><h3> Step 6: Grow </b></h3><br></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Congratulations! You are now an Authorized AuraRich Distributor and are approved to place orders of any size and of any product, mixing your own orders and creating your own adds, utilizing our scaled discount pricing model. This will enable you to grow as large as you want and earn larger returns as your order volumes grow. <br><br>
+<center><b><h3> Step 6: Grow </b></h3> <b>To earn Gold Points and Promotions</b></center>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Congratulations! You are now an Authorized AuraRich Distributor and are approved to place orders of any size and of any product, mixing your own orders and creating your own adds, utilizing our scaled discount pricing model. This will enable you to grow as large as you want and earn larger returns as your order volumes grow. <br><br>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp You will be issued a unique AuraRich Distributor ID number, which will allow us to track your Gold points, issue your rewards and trace your Reseller sales to you. <br><br>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp In addition, you will be listed on our site to allow customers in your area to connect with you for sales. <br>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp To earn Gold points and promotions, maintain and increase your sales volumes each month. Visit our Distributor Promotion page<br><br>
