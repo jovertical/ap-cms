@@ -104,7 +104,7 @@
                                         AuraRich Philippines
                                     </span>
                                     <span class="content">Shop now at AuraRich</span>
-                                    <a href="" class="btn btn-2">Shop now!</a>
+                                    <a href="{{ route(user_env().'.products.index')}}" class="btn btn-2">Reserve now! </a>
                                 </div>
                             </div>
                         </div>
