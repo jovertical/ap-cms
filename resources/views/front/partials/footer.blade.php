@@ -16,7 +16,7 @@
                         <div class="dis_table">
                             <div class="dis_tablecell">
                                 <div class="newsletter-title home-title">
-                                    <h4>EMAIL FOR NEWSLETTER</h4>
+                                    <h4 style=”color:000″>EMAIL FOR NEWSLETTER</h4>
                                 </div>
                                 <div class="newsletter-subtext">
                                     For more information and updates please subscribe to our
