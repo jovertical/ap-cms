@@ -31,10 +31,11 @@
         <div class="page-inner">
           <div id="page">
             <div class="details">              
-            <center><h2><i><b>Gold Point Incentive</b> </i></h2></center>
-            <center><h4><i>Gold Point Incentive is a system to measure Distributor's productivity and hardwork. In every sale there is an equivalent gold point allocated to the Distributor's individual profile.</i></h4></center>
+           
+            <center><h4><i> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp AuraRich Distributors will accrue Gold Points with their sales volumes, which go towards their promotion and awards. This is an addition to the profit you make from your sales. Consider Gold Points similar to Frequent Flier Miles. You will accrue them without thinking about it.</i></h4></center>
             <center><h4><i><b>AuraRich use this method to distinguish who among the distributors are qualified for the company tour incentives and promotions.</b></i></h4></center> <br> <br>
 
+<span><i> Product Gold Point Chart: </i></span>
             <table class="table1">
   <tr>
     <th>Product</th>
@@ -79,6 +80,16 @@
   </tr>
 
 </table>
+<span> <i> Gold Points can be used for : </i></span>
+<ul>
+ <i> 
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <li>Product Discounts. Turn your points into profits</li>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <li>Attendance to Training Seminars: Use your points to better yourself and your team.</li>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <li>Attendance to Corporate Events: Free Attendance to special events.</li>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <li>Personalized Advertisement Campaigns: Featured Distributor advertisements on AuraRich articles and promotions.</li>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <li>Promotional Materials: Business cards and Social Media mentions.</li>
+</i>
+</ul>
            
             </div>
           </div>
