@@ -62,5 +62,10 @@ class ReservationsController extends Controller
                 }
             ])
             ->make();
-	}
+    }
+
+    public function show(Reservation $reservation)
+    {
+        return view(user_env().'.reservations.show', compact('reservation'));
+    }
 }
