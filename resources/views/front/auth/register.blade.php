@@ -33,7 +33,7 @@
 											</label>
 
 											<select name="sub_type" id="sub_type" class="select capitalize">
-												<option value="" selected disabled>Pleas select a type</option>
+												<option value="" selected disabled>Please select a type</option>
 												<option value="distributor">Distributor</option>
 												<option value="reseller">Reseller</option>
 											</select>
