@@ -46,7 +46,7 @@
   <i>
   <div class="col-sm-12"><h3><b>Travel</b></h3> <br> <img src="/front/Travel.jpg"> <br> <br></div>
 <p style="text-align: justify;">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp As an AuraRich distributor, you will earn Gold points with each order and promotion, earning the opportunity to participate in corporate events, get exclusive offers and services, and the travel opportunities! In 2017 alone, Aura Rich Thailand has taken Top Selling Distributors to places like Hong Kong, Singapore and Tokyo! <br><br>
-Destinations planned for 2019 will be announced Christmas 2018! Trips are great marketing, networking and learning opportunities. </p>
+<center>Destinations planned for 2019 will be announced Christmas 2018! Trips are great marketing, networking and learning opportunities. </center></p>
 
   </i>
   </div>
