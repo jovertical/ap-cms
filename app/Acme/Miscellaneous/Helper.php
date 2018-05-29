@@ -116,10 +116,11 @@ if (! function_exists('image_url')) {
 if (! function_exists('active_menu')) {
     function active_menu($segment_2) {
         $segments = [
-            'dashboard'     => [null],
-            'inventory'     => ['categories', 'products'],
-            'CMS'           => ['tutorials', 'episodes', 'newsletters'],
-            'manage'        => ['users', 'superusers', 'settings'],
+            'dashboard' => [null],
+            'inventory' => ['categories', 'products'],
+            'reservation' => ['reservations'],
+            'CMS' => ['tutorials', 'episodes', 'newsletters'],
+            'manage' => ['users', 'superusers', 'settings'],
         ];
 
         foreach ($segments as $index => $segment) {
