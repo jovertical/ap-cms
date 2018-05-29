@@ -9,7 +9,7 @@
                     <div class="m-stack m-stack--ver m-stack--general m-stack--inline">
                         <div class="m-stack__item m-stack__item--middle m-brand__logo">
                             <a href="{{ route('root.home') }}" class="m-brand__logo-wrapper">
-                                <img src="/front/logo3.png" alt=""/>
+                                <img src="/front/logo3.png" alt="" />
                             </a>
                         </div>
 
@@ -20,7 +20,7 @@
                             </a>
 
                             <!-- begin::Responsive Header Menu Toggler-->
-                             <a id="m_aside_header_menu_mobile_toggle" href="javascript:;" class="m-brand__icon m-brand__toggler m--visible-tablet-and-mobile-inline-block m-brand__toggler--active">
+                            <a id="m_aside_header_menu_mobile_toggle" href="javascript:;" class="m-brand__icon m-brand__toggler m--visible-tablet-and-mobile-inline-block m-brand__toggler--active">
                                 <span></span>
                             </a>
                             <!-- end::Responsive Header Menu Toggler-->
@@ -41,10 +41,11 @@
                         <div class="m-stack__item m-topbar__nav-wrapper">
                             <ul class="m-topbar__nav m-nav m-nav--inline">
                                 <!-- Profile -->
-                                <li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" data-dropdown-toggle="click">
+                                <li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light"
+                                    data-dropdown-toggle="click">
                                     <a href="#" class="m-nav__link m-dropdown__toggle">
                                         <span class="m-topbar__userpic m--hide">
-                                            <img src="{{ image_url(Auth::user()) }}" class="m--img-rounded m--marginless m--img-centered" alt=""/>
+                                            <img src="{{ image_url(Auth::user()) }}" class="m--img-rounded m--marginless m--img-centered" alt="" />
                                         </span>
                                         <span class="m-topbar__welcome">Hello,&nbsp;</span>
                                         <span class="m-topbar__username">{{ Auth::user()->name }}</span>
@@ -52,11 +53,10 @@
                                     <div class="m-dropdown__wrapper">
                                         <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
                                         <div class="m-dropdown__inner">
-                                            <div class="m-dropdown__header m--align-center"
-                                                style="background: url(/root/assets/app/media/img/misc/user_profile_bg.jpg); background-size: cover;">
+                                            <div class="m-dropdown__header m--align-center" style="background: url(/root/assets/app/media/img/misc/user_profile_bg.jpg); background-size: cover;">
                                                 <div class="m-card-user m-card-user--skin-dark">
                                                     <div class="m-card-user__pic">
-                                                        <img src="{{ image_url(Auth::user()) }}" class="m--img-rounded m--marginless" alt=""/>
+                                                        <img src="{{ image_url(Auth::user()) }}" class="m--img-rounded m--marginless" alt="" />
                                                     </div>
                                                     <div class="m-card-user__details">
                                                         <span class="m-card-user__name m--font-weight-500">
@@ -101,8 +101,7 @@
 
                                                         <li class="m-nav__item">
                                                             <a href="#" onclick="event.preventDefault();
-                                                                document.getElementById('form-logout').submit();"
-                                                                    class="btn m-btn--pill btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">Logout
+                                                                document.getElementById('form-logout').submit();" class="btn m-btn--pill btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">Logout
                                                             </a>
                                                         </li>
 
@@ -118,7 +117,8 @@
                                 <!--/. Profile -->
 
                                 <!-- Notifications -->
-                                <li class="m-nav__item m-topbar__quick-actions m-topbar__quick-actions--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push m-dropdown--mobile-full-width m-dropdown--skin-light" data-dropdown-toggle="click" data-dropdown-persistent="true">
+                                <li class="m-nav__item m-topbar__quick-actions m-topbar__quick-actions--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push m-dropdown--mobile-full-width m-dropdown--skin-light"
+                                    data-dropdown-toggle="click" data-dropdown-persistent="true">
                                     <a href="#" class="m-nav__link m-dropdown__toggle" id="m_topbar_notification_icon">
                                         @if(Auth::user()->unreadNotifications()->count())
                                             <span class="m-nav__link-badge m-badge m-badge--dot m-badge--dot-small m-badge--danger">
@@ -134,8 +134,7 @@
                                     <div class="m-dropdown__wrapper">
                                         <span class="m-dropdown__arrow m-dropdown__arrow--right"></span>
                                         <div class="m-dropdown__inner">
-                                            <div class="m-dropdown__header m--align-center"
-                                                style="background: url(/root/assets/app/media/img/misc/notification_bg.jpg); background-size: cover;">
+                                            <div class="m-dropdown__header m--align-center" style="background: url(/root/assets/app/media/img/misc/notification_bg.jpg); background-size: cover;">
                                                 <span class="m-dropdown__header-title">
                                                     {{ Auth::user()->unreadNotifications->count() }}
                                                 </span>
@@ -149,14 +148,9 @@
                                                                 @foreach(Auth::user()->unreadNotifications as $notification)
                                                                     <div class="m-list-timeline__item">
                                                                         <span class="m-list-timeline__badge"></span>
-                                                                        <a href="{{ $notification->data['redirect_to'] }}"
-                                                                            id="read-notification"
-                                                                            class="m-list-timeline__text"
-                                                                            data-action="{{ route(
-                                                                                user_env('notification.read'), Auth::user()
-                                                                            ) }}"
-                                                                            data-id="{{ $notification->id }}"
-                                                                        >
+                                                                        <a href="{{ $notification->data['redirect_to'] }}" id="read-notification" class="m-list-timeline__text" data-action="{{ route(
+                                                                                    user_env('notification.read'), Auth::user()
+                                                                                ) }}" data-id="{{ $notification->id }}">
                                                                             <span>{{ $notification->data['subject'] }}</span>
                                                                         </a>
                                                                         <span class="m-list-timeline__time">
@@ -169,15 +163,11 @@
                                                     </div>
 
                                                     <div class="py-2 text-center">
-                                                        <a href="javascript:;" class="m-link m--font-bold"
-                                                            onclick="event.preventDefault();
+                                                        <a href="javascript:;" class="m-link m--font-bold" onclick="event.preventDefault();
                                                                 document.getElementById('form-notifications.read').submit();">
-                                                                    Mark all as read</a>
-                                                        <form method="POST"
-                                                            action="{{ route(user_env('notifications.read'), Auth::user()) }}"
-                                                                id="form-notifications.read">
-                                                            @method('PATCH')
-                                                            @csrf
+                                                            Mark all as read</a>
+                                                        <form method="POST" action="{{ route(user_env('notifications.read'), Auth::user()) }}" id="form-notifications.read">
+                                                            @method('PATCH') @csrf
                                                         </form>
                                                     </div>
                                                 </div>
@@ -188,7 +178,8 @@
                                 <!--/. Notifications -->
 
                                 <!-- Quick Actions -->
-                                <li class="m-nav__item m-topbar__quick-actions m-topbar__quick-actions--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push m-dropdown--mobile-full-width m-dropdown--skin-light"  data-dropdown-toggle="click">
+                                <li class="m-nav__item m-topbar__quick-actions m-topbar__quick-actions--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push m-dropdown--mobile-full-width m-dropdown--skin-light"
+                                    data-dropdown-toggle="click">
                                     <a href="#" class="m-nav__link m-dropdown__toggle">
                                         <span class="m-nav__link-badge m-badge m-badge--dot m-badge--info m--hide"></span>
                                         <span class="m-nav__link-icon">
@@ -200,8 +191,7 @@
                                     <div class="m-dropdown__wrapper">
                                         <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
                                         <div class="m-dropdown__inner">
-                                            <div class="m-dropdown__header m--align-center"
-                                                style="background: url(/root/assets/app/media/img/misc/quick_actions_bg.jpg); background-size: cover;">
+                                            <div class="m-dropdown__header m--align-center" style="background: url(/root/assets/app/media/img/misc/quick_actions_bg.jpg); background-size: cover;">
                                                 <span class="m-dropdown__header-title">Quick Actions</span>
                                                 <span class="m-dropdown__header-subtitle">Shortcuts</span>
                                             </div>
@@ -210,13 +200,11 @@
                                                     <div class="m-scrollable" data-scrollable="false" data-max-height="380" data-mobile-max-height="200">
                                                         <div class="m-nav-grid m-nav-grid--skin-light">
                                                             <div class="m-nav-grid__row">
-                                                                <a href="#"
-                                                                    class="m-nav-grid__item">
+                                                                <a href="#" class="m-nav-grid__item">
                                                                     <i class="m-nav-grid__icon flaticon-time-1"></i>
                                                                     <span class="m-nav-grid__text">New Users</span>
                                                                 </a>
-                                                                <a href="#"
-                                                                    class="m-nav-grid__item">
+                                                                <a href="#" class="m-nav-grid__item">
                                                                     <i class="m-nav-grid__icon flaticon-time"></i>
                                                                     <span class="m-nav-grid__text">Create User</span>
                                                                 </a>
@@ -245,13 +233,15 @@
             <div class="m-stack m-stack--ver m-stack--desktop">
                 <!-- begin::Horizontal Menu -->
                 <div class="m-stack__item m-stack__item--middle m-stack__item--fluid">
-                    <button class="m-aside-header-menu-mobile-close  m-aside-header-menu-mobile-close--skin-light " id="m_aside_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
+                    <button class="m-aside-header-menu-mobile-close  m-aside-header-menu-mobile-close--skin-light " id="m_aside_header_menu_mobile_close_btn">
+                        <i class="la la-close"></i>
+                    </button>
 
                     <div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-dark m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-light m-aside-header-menu-mobile--submenu-skin-light">
                         <ul class="m-menu__nav  m-menu__nav--submenu-arrow">
                             <!-- Dashboard -->
                             <li class="m-menu__item {{ active_menu(Request::segment(2)) == 'dashboard' ?
-                                'm-menu__item--active' : '' }}"  aria-haspopup="true">
+                                'm-menu__item--active' : '' }}" aria-haspopup="true">
                                 <a href="{{ route('root.home') }}" class="m-menu__link">
                                     <span class="m-menu__item-here"></span>
                                     <span class="m-menu__link-text">Dashboard</span>
@@ -261,8 +251,8 @@
 
                             <!-- Inventory -->
                             <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel
-                                {{ active_menu(Request::segment(2)) == 'inventory' ? 'm-menu__item--active' : '' }}"
-                                    data-menu-submenu-toggle="click" aria-haspopup="true">
+                                {{ active_menu(Request::segment(2)) == 'inventory' ? 'm-menu__item--active' : '' }}" data-menu-submenu-toggle="click"
+                                aria-haspopup="true">
                                 <a href="#" class="m-menu__link m-menu__toggle">
                                     <span class="m-menu__item-here"></span>
                                     <span class="m-menu__link-text">Inventory</span>
@@ -288,7 +278,7 @@
                                         </li>
                                         <li class="m-menu__item" aria-haspopup="true">
                                             <a href="{{ route(user_env().'.deals.index') }}" class="m-menu__link">
-                                                <i class="m-menu__link-icon flaticon-business"></i>
+                                                <i class="m-menu__link-icon flaticon-gift"></i>
                                                 <span class="m-menu__link-text">Deals</span>
                                             </a>
                                         </li>
@@ -297,10 +287,35 @@
                             </li>
                             <!--/. Inventory -->
 
+                            <!-- Reservation -->
+                            <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel
+                            {{ active_menu(Request::segment(2)) == 'reservation' ? 'm-menu__item--active' : '' }}" data-menu-submenu-toggle="click"
+                                aria-haspopup="true">
+                                <a href="#" class="m-menu__link m-menu__toggle">
+                                    <span class="m-menu__item-here"></span>
+                                    <span class="m-menu__link-text">Reservation</span>
+                                    <i class="m-menu__hor-arrow la la-angle-down"></i>
+                                    <i class="m-menu__ver-arrow la la-angle-right"></i>
+                                </a>
+
+                                <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
+                                    <span class="m-menu__arrow m-menu__arrow--adjust"></span>
+                                    <ul class="m-menu__subnav">
+                                        <li class="m-menu__item" aria-haspopup="true">
+                                            <a href="{{ route(user_env().'.reservations.index') }}" class="m-menu__link">
+                                                <i class="m-menu__link-icon flaticon-folder-1"></i>
+                                                <span class="m-menu__link-text">Reservations</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!--/. Reservation -->
+
                             <!-- CMS -->
                             <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel
-                                {{ active_menu(Request::segment(2)) == 'CMS' ? 'm-menu__item--active' : '' }}"
-                                    data-menu-submenu-toggle="click" aria-haspopup="true">
+                                {{ active_menu(Request::segment(2)) == 'CMS' ? 'm-menu__item--active' : '' }}" data-menu-submenu-toggle="click"
+                                aria-haspopup="true">
                                 <a href="#" class="m-menu__link m-menu__toggle">
                                     <span class="m-menu__item-here"></span>
                                     <span class="m-menu__link-text">CMS</span>
@@ -313,7 +328,7 @@
                                     <ul class="m-menu__subnav">
                                         <li class="m-menu__item" aria-haspopup="true">
                                             <a href="{{ route(user_env().'.news.index') }}" class="m-menu__link">
-                                                <i class="m-menu__link-icon flaticon-book"></i>
+                                                <i class="m-menu__link-icon flaticon-speech-bubble-1"></i>
                                                 <span class="m-menu__link-text">News</span>
                                             </a>
                                         </li>
@@ -344,8 +359,8 @@
 
                             <!-- Manage -->
                             <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel
-                                {{ active_menu(Request::segment(2)) == 'manage' ? 'm-menu__item--active' : '' }}"
-                                    data-menu-submenu-toggle="click" aria-haspopup="true">
+                                {{ active_menu(Request::segment(2)) == 'manage' ? 'm-menu__item--active' : '' }}" data-menu-submenu-toggle="click"
+                                aria-haspopup="true">
                                 <a href="#" class="m-menu__link m-menu__toggle">
                                     <span class="m-menu__item-here"></span>
                                     <span class="m-menu__link-text">Manage</span>
@@ -382,7 +397,8 @@
                             <!--/. Manage -->
 
                             <!-- More -->
-                            <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel m-menu__item--more m-menu__item--icon-only" data-menu-submenu-toggle="click" data-redirect="true" aria-haspopup="true">
+                            <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel m-menu__item--more m-menu__item--icon-only" data-menu-submenu-toggle="click"
+                                data-redirect="true" aria-haspopup="true">
                                 <a href="javascript:void(0);" class="m-menu__link m-menu__toggle">
                                     <span class="m-menu__item-here"></span>
                                     <i class="m-menu__link-icon flaticon-more-v3"></i>
@@ -394,7 +410,7 @@
 
                                     <ul class="m-menu__subnav">
                                         <li class="m-menu__item" data-redirect="true" aria-haspopup="true">
-                                            <a  href="#" class="m-menu__link ">
+                                            <a href="#" class="m-menu__link ">
                                                 <i class="m-menu__link-icon flaticon-clock-1"></i>
                                                 <span class="m-menu__link-text">Activity Log</span>
                                             </a>

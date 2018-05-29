@@ -112,6 +112,7 @@ Route::namespace('Root')->prefix('su')->name('root.')->group(function () {
             Route::get('/', 'ReservationsController@index')->name('index');
             Route::patch('{reservation}', 'ReservationsController@update')->name('update');
             Route::get('{reservation}', 'ReservationsController@show')->name('show');
+            Route::get('datatables/index', 'ReservationsController@datatables')->name('datatables.index');
         });
 
         Route::prefix('settings')->name('settings.')->group(function() {
