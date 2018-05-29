@@ -3,26 +3,7 @@
 @section('content')
 
   <div id="main-content" class="wrapper clearfix">           
-    <section class="page-heading">
-  <div class="page-heading-wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="page-heading-inner">
-          <h1 class="page-title"><span>Gold Point Incentive</span></h1>
-          <div class="breadcrumb clearfix">
-            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ route(user_env().'.home') }}" title="Cosmetics Style 2" itemprop="url"><span itemprop="title">Home</span></a></span>
-            <span class="arrow-space">&#62;</span>
-            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-              <a href="{{ route(user_env().'.system') }}" title="Gold Point Incentive">Gold Point Incentive</a>
-
-            </span> <br> 
-                     
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+   
 
 <section class="page-content">
   <div class="page-wrapper">
@@ -31,7 +12,7 @@
         <div class="page-inner">
           <div id="page">
             <div class="details">              
-           
+           <br><br><br>
             <center><h4><i> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp AuraRich Distributors will accrue Gold Points with their sales volumes, which go towards their promotion and awards. This is an addition to the profit you make from your sales. Consider Gold Points similar to Frequent Flier Miles. You will accrue them without thinking about it.</i></h4></center>
             <center><h4><i><b>AuraRich use this method to distinguish who among the distributors are qualified for the company tour incentives and promotions.</b></i></h4></center> <br> <br>
 

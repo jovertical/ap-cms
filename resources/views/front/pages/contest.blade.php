@@ -3,26 +3,7 @@
 @section('content')
 
   <div id="main-content" class="wrapper clearfix">           
-    <section class="page-heading">
-  <div class="page-heading-wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="page-heading-inner">
-          <h1 class="page-title"><span>Before and After Contest</span></h1>
-          <div class="breadcrumb clearfix">
-            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ route(user_env().'.home') }}" title="Cosmetics Style 2" itemprop="url"><span itemprop="title">Home</span></a></span>
-            <span class="arrow-space">&#62;</span>
-            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-              <a href="{{ route(user_env().'.contest') }}" title="Contest">Contest</a>
-
-            </span> <br> 
-                 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+   <br><br><br>
 
 <section class="page-content">
   <div class="page-wrapper">
