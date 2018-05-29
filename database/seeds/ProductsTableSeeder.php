@@ -77,7 +77,7 @@ class ProductsTableSeeder extends Seeder
 
         // deals
         \App\Product::create([
-            'category_id' => 0,
+            'category_id' => 1,
             'type' => 'deal',
             'name' => 'Reseller Kit # 1 Face Set',
             'description' => '
@@ -90,7 +90,7 @@ class ProductsTableSeeder extends Seeder
         ]);
 
         \App\Product::create([
-            'category_id' => 0,
+            'category_id' => 1,
             'type' => 'deal',
             'name' => 'Reseller Kit # 2 Makeup Set',
             'description' => '<i><b>"A Full Makeup Set"</b><br><br>
@@ -100,7 +100,7 @@ class ProductsTableSeeder extends Seeder
         ]);
 
         \App\Product::create([
-            'category_id' => 0,
+            'category_id' => 1,
             'type' => 'deal',
             'name' => 'Reseller Kit # 3 Body Set',
             'description' => '<i> <b>"A Complete Anti-Aging Solution for the Body."</i> </b><br><br>
@@ -111,7 +111,7 @@ class ProductsTableSeeder extends Seeder
         ]);
 
         \App\Product::create([
-            'category_id' => 0,
+            'category_id' => 1,
             'type' => 'deal',
             'name' => 'Distributor Signup Pack',
             'description' => '<i>Three(3) pieces of each nine(9) AuraRich products.</i>',
@@ -119,7 +119,7 @@ class ProductsTableSeeder extends Seeder
         ]);
 
         \App\Product::create([
-            'category_id' => 0,
+            'category_id' => 1,
             'type' => 'deal',
             'name' => 'Distributor Sample Pack',
             'description' => '<i>Five(5) pieces of each nine(9) AuraRich products. </i>',
@@ -127,7 +127,7 @@ class ProductsTableSeeder extends Seeder
         ]);
 
         \App\Product::create([
-            'category_id' => 0,
+            'category_id' => 1,
             'type' => 'deal',
             'name' => 'Distributor Starter Pack',
             'description' => '<i>Ten(10) pieces of each nine(9) AuraRich products.  </i>',

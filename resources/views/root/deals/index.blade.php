@@ -27,24 +27,6 @@
                 <div class="row align-items-center">
                     <div class="col-xl-8 order-2 order-xl-1">
                         <div class="form-group m-form__group row align-items-center">
-                            <!-- Featured -->
-                            <div class="col-md-4">
-                                <div class="m-form__group m-form__group--inline">
-                                    <div class="m-form__label">
-                                        <label>Required:</label>
-                                    </div>
-                                    <div class="m-form__control">
-                                        <select class="form-control m-bootstrap-select" id="distributor_requirement">
-                                            <option value="">All</option>
-                                            <option value="1">Required</option>
-                                            <option value="0">Not</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="d-md-none m--margin-bottom-10"></div>
-                            </div>
-                            <!--/. Featured -->
-
                             <!-- Availability -->
                             <div class="col-md-4">
                                 <div class="m-form__group m-form__group--inline">
@@ -62,7 +44,7 @@
                                 <div class="d-md-none m--margin-bottom-10"></div>
                             </div>
                             <!--/. Availability -->
-                            
+
                             <!-- Search -->
                             <div class="col-md-4">
                                 <div class="m-input-icon m-input-icon--left">
@@ -216,14 +198,29 @@
                                 ';
                             },
                         },
-                       
+                        {
+                            field: 'category',
+                            title: 'Category',
+                            width: 100,
+                            template: function(deal) {
+                                if (deal.category != null) {
+                                    return '\
+                                        <a href="'+ deal.DT_RowData.category_edit_route +'" class="m--font-link">'
+                                            + deal.category.name +
+                                        '</a>\
+                                    ';
+                                }
+
+                                return;
+                            }
+                        },
                         {
                             field: 'name',
                             title: 'Name',
                             width: 150,
                             template: function(deal) {
                                 var name = deal.name;
-                                var image = deal.file_path > 0 ? deal.file_path : null;
+                                var image = deal.images.length > 0 ? deal.images[0].file_path : null;
 
                                 if (image != null) {
                                     output = '<div class="m-card-user m-card-user--sm">\
@@ -260,21 +257,6 @@
                             field: 'price',
                             title: 'Price',
                             width: 100
-                        },
-                        {
-                            field: 'distributor_requirement',
-                            title: 'DR',
-                            width: 75,
-                            template: function(deal) {
-                                var distributor_requirement = deal.distributor_requirement ? 1 : 0;
-                                var statuses = {
-                                    0: {'title': 'Not', 'class': ' m-badge--metal'},
-                                    1: {'title': 'Requirement', 'class': 'm-badge--success'},
-                                };
-
-                                return '<span class="m-badge ' + statuses[distributor_requirement].class +
-                                ' m-badge--wide">' + statuses[distributor_requirement].title + '</span>';
-                            },
                         },
                         {
                             field: 'active',

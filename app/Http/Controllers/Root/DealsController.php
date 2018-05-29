@@ -20,12 +20,12 @@ use Setting, FileUploader;
 /**
  * Repositories
  */
-use App\Acme\Repositories\{UserRepository, DealRepository};
+use App\Acme\Repositories\{UserRepository, CategoryRepository, ProductRepository};
 
 /**
  * Models
  */
-use App\{User, Deal};
+use App\{User, Category, Product, ProductImage};
 
 /**
  * Laravel
@@ -36,8 +36,17 @@ use App\Http\Controllers\Controller;
 
 class DealsController extends Controller
 {
-	
-	protected $deal_repo;
+	/**
+	 * Category Repository
+	 * @var object
+	 */
+	protected $category_repo;
+
+	/**
+	 * Product Repository
+	 * @var object
+	 */
+	protected $product_repo;
 
 	/**
 	 * User Repository
@@ -46,10 +55,12 @@ class DealsController extends Controller
 	protected $user_repo;
 
     public function __construct(
-    	DealRepository $deal_repo,
+    	CategoryRepository $category_repo,
+    	ProductRepository $product_repo,
     	UserRepository $user_repo
     ) {
-    	$this->deal_repo = $deal_repo;
+    	$this->category_repo = $category_repo;
+    	$this->product_repo = $product_repo;
     	$this->user_repo = $user_repo;
     }
 
@@ -60,18 +71,21 @@ class DealsController extends Controller
 
 	public function datatables()
 	{
-        return DataTables::of(Deal::get())
-            ->rawColumns(['description','name'])
-            ->addColumn('images', function (Deal $deal) {
+        return DataTables::of(Product::where('type', 'deal')->get())
+            ->rawColumns(['description'])
+            ->addColumn('category', function (Product $deal) {
+                return optional($deal->category)->toArray();
+            })
+            ->addColumn('images', function (Product $deal) {
                 return optional($deal->images)->toArray();
             })
-            ->addColumn('creator', function (Deal $deal) {
+            ->addColumn('creator', function (Product $deal) {
                 return optional($deal->creator)->toArray();
             })
-            ->addColumn('updater', function (Deal $deal) {
+            ->addColumn('updater', function (Product $deal) {
                 return optional($deal->updater)->toArray();
             })
-            ->addColumn('deleter', function (Deal $deal) {
+            ->addColumn('deleter', function (Product $deal) {
                 return optional($deal->deleter)->toArray();
             })
             ->setRowData([
@@ -86,23 +100,46 @@ class DealsController extends Controller
                 },
                 'image_route' => function($deal) {
                     return route(user_env().'.deals.images.create', $deal);
-               },
+                },
+                'category_edit_route' => function($deal) {
+                    return route(user_env().'.categories.edit', $deal->category);
+                },
             ])
             ->make();
 	}
-   
+
+	public function create()
+	{
+        $categories = Category::where('active', 1)->get();
+
+        if (count($categories) == 0) {
+            $category_create_route = route(user_env().'.categories.create');
+
+            session()->flash('message', [
+                'type' => 'warning',
+                'content' => 'There are no categories yet. Create a <a href="'.$category_create_route.'"
+                                class="m-link m--font-boldest">category</a> first.'
+            ]);
+        }
+
+        return view(user_env().'.deals.create', compact('categories'));
+	}
+
 	public function store(Request $request)
 	{
         $this->validate($request, [
+        	'category' => 'required|integer',
             'name' => 'required|max:255|unique:categories,name,NULL,id,deleted_at,NULL',
             'price' => 'required'
         ]);
 
         try {
-        	$deal = new Deal;
+            $deal = new Product;
+            $deal->type = 'deal';
         	$deal->name = $request->input('name');
         	$deal->price = $request->input('price');
             $deal->description = $request->input('description');
+            $deal->featured = $request->filled('featured');
 
         	if ($deal->save()) {
                 $this->user_repo->superusers()->each(function($notifiable) use ($deal) {
@@ -128,24 +165,28 @@ class DealsController extends Controller
         return back();
 	}
 
-	
-    public function edit(Request $request, Deal $deal)
-    {
+	public function edit(Request $request, Product $deal)
+	{
+		$categories = Category::where('active', 1)->get();
 
-        return view(user_env().'.deals.edit', compact('deal'));
-    }
+		return view(user_env().'.deals.edit', compact(['categories', 'deal']));
+	}
 
-	public function update(Request $request, Deal $deal)
+	public function update(Request $request, Product $deal)
 	{
         $this->validate($request, [
-            'name' => "required|max:255|unique:deals,name,{$deal->id},id,deleted_at,NULL",
+        	'category' => 'required|integer',
+            'name' => "required|max:255|unique:products,name,{$deal->id},id,deleted_at,NULL",
             'price' => 'required'
         ]);
 
         try {
+            $deal->type = 'deal';
+        	$deal->category_id = $request->input('category');
         	$deal->name = $request->input('name');
         	$deal->price = $request->input('price');
         	$deal->description = $request->input('description');
+            $deal->featured = $request->filled('featured');
 
         	if ($deal->save()) {
                 $this->user_repo->superusers()->each(function($notifiable) use ($deal) {
@@ -171,7 +212,7 @@ class DealsController extends Controller
         return back();
 	}
 
-	public function destroy(Request $request, Deal $deal)
+	public function destroy(Request $request, Product $deal)
 	{
         try {
             if ($deal->delete()) {
@@ -188,7 +229,7 @@ class DealsController extends Controller
                 return back();
             }
 
-            Notify::warning('Cannot delete Deal.', 'Whooopss!');
+            Notify::warning('Cannot delete deal.', 'Whooopss!');
         } catch (Exception $e) {
             Notify::error($e->getMessage(), 'Whooopss!');
         }
@@ -196,7 +237,7 @@ class DealsController extends Controller
         return back();
 	}
 
-	public function toggle(Deal $deal)
+	public function toggle(Product $deal)
     {
         try {
             $deal->active = $deal->active ? 0 : 1;
@@ -225,33 +266,41 @@ class DealsController extends Controller
         return back();
     }
 
- public function imageIndex(Request $request, Deal $deal)
+    public function imageIndex(Request $request, Product $deal)
     {
-        $directory = $deal->file_directory.'/thumbnails';
+        try {
+            $product_images = $deal->images;
 
-        if (File::exists($directory.'/'.$deal->file_name)) {
-            $file_path = $directory.'/'.$deal->file_name;
+            $images = [];
 
-            $images = [
-                [
-                    'directory' => url()->to($directory),
-                    'name'      => File::name($file_path).'.'.File::extension($file_path),
-                    'size'      => File::size($file_path)
-                ]
-            ];
+            foreach($product_images as $index => $product_image) {
+                $thumbs_directory = $product_image->file_directory.'/thumbnails';
 
-            return response()->json(compact('images'));
+                if (File::exists($thumbs_directory.'/'.$product_image->file_name)) {
+                    $file_path = $thumbs_directory.'/'.$product_image->file_name;
+
+                    $images[] = [
+                        'directory' => url()->to($thumbs_directory),
+                        'name'      => File::name($file_path).'.'.File::extension($file_path),
+                        'size'      => File::size($file_path)
+                    ];
+                }
+            }
+
+            return response()->json(['images' => $images]);
+        } catch(Exception $e) {
+            return response()->json($e, 400);
         }
 
-        return response()->json('No image.');
+        return response()->json([]);
     }
 
-    public function imageCreate(Deal $deal)
+    public function imageCreate(Product $deal)
     {
         return view(user_env().'.deals.images', compact('deal'));
     }
 
-    public function imageStore(Request $request, Deal $deal)
+    public function imageStore(Request $request, Product $deal)
     {
         try {
             $file_uploader = new FileUploader;
@@ -259,13 +308,15 @@ class DealsController extends Controller
                 $request->file('image'), "deals/{$deal->id}"
             );
 
-            $deal->file_path = $file_uploader['file_path'];
-            $deal->file_directory = $file_uploader['file_directory'];
-            $deal->file_name = $file_uploader['file_name'];
-
-            if ($deal->save()) {
-                return response()->json($file_uploader);
+            if ($deal->images()->count() < 5) {
+                $deal->images()->create([
+                    'file_path'         => $file_uploader['file_path'],
+                    'file_directory'    => $file_uploader['file_directory'],
+                    'file_name'         => $file_uploader['file_name']
+                ]);
             }
+
+            return response()->json($file_uploader);
         } catch(Exception $e) {
             return response()->json($e, 400);
         }
@@ -273,28 +324,28 @@ class DealsController extends Controller
         return response()->json('File not uploaded.');
     }
 
-    public function imageDestroy(Request $request, Category $category)
+    public function imageDestroy(Request $request, Product $deal)
     {
        try {
-            $file_name = $requestdeals->input('file_name');
+            $file_name = $request->input('file_name');
 
-            if (File::exists($deal->file_directory.'/'.$file_name)) {
-                File::delete($deal->file_directory.'/'.$file_name);
+            $product_image =    $deal->images->filter(function($image) use ($file_name) {
+                                    return $image->file_name == $file_name;
+                                })->first();
+
+            if (File::exists($product_image->file_directory.'/'.$file_name)) {
+                File::delete($product_image->file_directory.'/'.$file_name);
             }
 
-            if (File::exists($deal->file_directory.'/resized/'.$file_name)) {
-                File::delete($deal->file_directory.'/resized/'.$file_name);
+            if (File::exists($product_image->file_directory.'/resized/'.$file_name)) {
+                File::delete($product_image->file_directory.'/resized/'.$file_name);
             }
 
-            if (File::exists($deal->file_directory.'/thumbnails/'.$file_name)) {
-                File::delete($deal->file_directory.'/thumbnails/'.$file_name);
+            if (File::exists($product_image->file_directory.'/thumbnails/'.$file_name)) {
+                File::delete($product_image->file_directory.'/thumbnails/'.$file_name);
             }
 
-            $deal->file_path = null;
-            $deal->file_directory = null;
-            $category->file_name = null;
-
-            if ($deal->save()) {
+            if ($product_image->delete()) {
                 return response()->json('File deleted.');
             }
         } catch(Exception $e) {

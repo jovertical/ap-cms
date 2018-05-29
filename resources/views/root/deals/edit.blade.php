@@ -37,6 +37,34 @@
                     @endif
                 </div>
 
+                <!-- Category -->
+                <div class="form-group m-form__group row {{ $errors->has('category') ? 'has-danger' : '' }}">
+                    <label for="category" class="col-lg-2 col-form-label">
+                        Category <span class="m--font-danger">*</span>
+                    </label>
+
+                    <div class="col-lg-6">
+                        <select name="category" id="category" class="form-control m-bootstrap-select">
+                            <option value="" disabled selected>Please select it's category</option>
+
+                            @foreach($categories as $category)
+                                <option value="{{ $category->id }}" {{ old('category') ?? $deal->category_id ?
+                                    'selected' : '' }}>{{ $category->name }}
+                                </option>
+                            @endforeach
+                        </select>
+
+                        @if ($errors->has('category'))
+                            <div id="category-error" class="form-control-feedback">
+                                <span class="m--font-danger">{{ $errors->first('category') }}</span>
+                            </div>
+                        @endif
+
+                        <span class="m-form__help">The category this deal belongs to.</span>
+                    </div>
+                </div>
+                <!--/. Category -->
+
                 <!-- Name -->
                 <div class="form-group m-form__group row {{ $errors->has('name') ? 'has-danger' : '' }}">
                     <label for="name" class="col-lg-2 col-form-label">
@@ -102,6 +130,30 @@
 	                </div>
 	            </div>
                 <!--/. Description -->
+
+                <!-- Featured -->
+                <div class="form-group m-form__group row {{ $errors->has('featured') ? 'has-danger' : '' }}">
+                    <label for="featured" class="col-lg-2 col-form-label">
+                        Featured:
+                    </label>
+
+                    <div class="col-lg-6">
+                        <span id="featured_wrapper" class="m-switch m-switch--lg m-switch--icon
+                            {{ $deal->featured ? 'm-switch--success' : ' m-switch--danger' }}">
+                            <label>
+                                <input type="checkbox" name="featured" id="featured"
+                                    {{ $deal->featured ? 'checked="checked"' : '' }}>
+                                <span></span>
+                            </label>
+                        </span>
+
+                        <br>
+
+                        <span class="m-form__help">Whether the deal is featured or not.</span>
+                    </div>
+                </div>
+                <!--/. Featured -->
+
                 <!-- Actions -->
                 <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
                     <div class="m-form__actions m-form__actions--solid">
@@ -158,7 +210,7 @@
                 // phone number
                 $('input[id=price]').inputmask("999,999,999.99", {
                     numericInput: true
-                }); 
+                });
                 //. phone number
             }
 
@@ -166,6 +218,23 @@
             var select = function () {
                 $('.m-bootstrap-select').selectpicker();
             }
+
+            // switch
+            var switcher = function() {
+                var featured = $('input[id=featured]');
+                var featured_wrapper = $('#featured_wrapper');
+
+                featured.on('change', function() {
+                    if ($(this).prop('checked')) {
+                        featured_wrapper.addClass('m-switch--success');
+                        featured_wrapper.removeClass('m-switch--danger');
+                    } else {
+                        featured_wrapper.addClass('m-switch--danger');
+                        featured_wrapper.removeClass('m-switch--success');
+                    }
+                });
+            };
+
             // summernote
             var summernote = function () {
                 $('.summernote').summernote({

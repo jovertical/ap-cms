@@ -11,18 +11,18 @@
             <div class="m-portlet__head-caption">
                 <div class="m-portlet__head-title">
                     <span class="m-portlet__head-icon m--hide">
-                        <i class="la la-gear"></i>
+                    	<i class="la la-gear"></i>
                     </span>
 
-                    <h3 class="m-portlet__head-text">Create Deal</h3>
+                    <h3 class="m-portlet__head-text">Create product</h3>
                 </div>
             </div>
         </div>
 
-        <form method="POST" action="{{ route(user_env().'.deals.store') }}" id="form_store_deal" class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed m-form--state">
-            @csrf 
+        <form method="POST" action="{{ route(user_env().'.products.store') }}" id="form_store_product" class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed m-form--state">
+            @csrf
 
-            <div class="m-portlet__body">
+	        <div class="m-portlet__body">
                 <!-- Message -->
                 <div class="form-group m-form__group row">
                     @if (Session::has('message'))
@@ -36,7 +36,34 @@
                     @endif
                 </div>
 
-               
+                <!-- Category -->
+                <div class="form-group m-form__group row {{ $errors->has('category') ? 'has-danger' : '' }}">
+                    <label for="category" class="col-lg-2 col-form-label">
+                        Category <span class="m--font-danger">*</span>
+                    </label>
+
+                    <div class="col-lg-6">
+                        <select name="category" id="category" class="form-control m-bootstrap-select">
+                            <option value="" disabled selected>Please select it's category</option>
+
+                            @foreach($categories as $category)
+                                <option value="{{ $category->id }}" {{ old('category') ?? Request::get('category') ==
+                                    $category->id ? 'selected' : '' }}>{{ $category->name }}
+                                </option>
+                            @endforeach
+                        </select>
+
+                        @if ($errors->has('category'))
+                            <div id="category-error" class="form-control-feedback">
+                                <span class="m--font-danger">{{ $errors->first('category') }}</span>
+                            </div>
+                        @endif
+
+                        <span class="m-form__help">The category this product belongs to.</span>
+                    </div>
+                </div>
+                <!--/. Category -->
+
                 <!-- Name -->
                 <div class="form-group m-form__group row {{ $errors->has('name') ? 'has-danger' : '' }}">
                     <label for="name" class="col-lg-2 col-form-label">
@@ -54,7 +81,7 @@
                             </div>
                         @endif
 
-                        <span class="m-form__help">The name of the deal.</span>
+                        <span class="m-form__help">The name of the product.</span>
                     </div>
                 </div>
                 <!--/. Name -->
@@ -76,33 +103,53 @@
                             </div>
                         @endif
 
-                        <span class="m-form__help">The price of the deal.</span>
+                        <span class="m-form__help">The price of the product.</span>
                     </div>
                 </div>
                 <!--/. Price -->
 
-                <!-- Description -->
-                <div class="form-group m-form__group row {{ $errors->has('description') ? 'has-danger' : '' }}">
-                    <label for="description" class="col-lg-2 col-form-label">
-                        Description
+	            <!-- Description -->
+	            <div class="form-group m-form__group row {{ $errors->has('description') ? 'has-danger' : '' }}">
+	                <label for="description" class="col-lg-2 col-form-label">
+	                    Description
+	                </label>
+
+	                <div class="col-lg-6">
+	                    <textarea name="description" id="description" class="summernote {{ $errors->has('description') ?
+	                    	' form-control-danger' : '' }}">{!! old('description') !!}
+	                    </textarea>
+
+	                    @if ($errors->has('description'))
+	                        <div id="description-error" class="form-control-feedback">
+	                            <span class="m--font-danger">{{ $errors->first('description') }}</span>
+	                        </div>
+	                    @endif
+
+	                    <span class="m-form__help"></span>
+	                </div>
+	            </div>
+                <!--/. Description -->
+                
+                <!-- Featured -->
+                <div class="form-group m-form__group row {{ $errors->has('featured') ? 'has-danger' : '' }}">
+                    <label for="featured" class="col-lg-2 col-form-label">
+                        Featured: 
                     </label>
 
                     <div class="col-lg-6">
-                        <textarea name="description" id="description" class="summernote {{ $errors->has('description') ?
-                            ' form-control-danger' : '' }}">{!! old('description') !!}
-                        </textarea>
+                        <span id="featured_wrapper" class="m-switch m-switch--lg m-switch--icon m-switch--danger">
+                            <label>
+                                <input type="checkbox" name="featured" id="featured">
+                                <span></span>
+                            </label>
+                        </span>
 
-                        @if ($errors->has('description'))
-                            <div id="description-error" class="form-control-feedback">
-                                <span class="m--font-danger">{{ $errors->first('description') }}</span>
-                            </div>
-                        @endif
+                        <br>
 
-                        <span class="m-form__help"></span>
+                        <span class="m-form__help">Whether the product is featured or not.</span>
                     </div>
                 </div>
-                <!--/. Description -->
-              
+                <!--/. Featured -->
 
                 <!-- Actions -->
                 <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
@@ -111,13 +158,13 @@
                             <div class="col-lg-2"></div>
                             <div class="col-lg-6">
                                 <button type="submit" id="submit" class="btn btn-brand">Create</button>
-                                <a href="{{ route(user_env().'.deals.index') }}" class="btn btn-secondary">Cancel</a>
+                                <a href="{{ route(user_env().'.products.index') }}" class="btn btn-secondary">Cancel</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--/. Actions -->
-            </div>
+			</div>
         </form>
     </div>
 @endsection
@@ -127,11 +174,14 @@
         var data = function () {
             // validator
             var validator = function () {
-                var form = $("form[id=form_store_deal]");
+            	var form = $("form[id=form_store_product]");
 
                 form.validate({
                     rules: {
-                       name: {
+                        category: {
+                            required: true
+                        },
+                        name: {
                             required: true,
                             maxlength: 255
                         },
@@ -139,7 +189,7 @@
                             required: true
                         },
                         description: {
-                            maxlength: 510
+                        	maxlength: 510
                         }
 
                     },
@@ -152,9 +202,36 @@
                 });
             }
 
-          
+            // input masks
+            var inputMasks = function () {
+                // phone number
+                $('input[id=price]').inputmask("999,999,999.99", {
+                    numericInput: true
+                }); 
+                //. phone number
+            }
 
-           
+            // select
+            var select = function () {
+                $('.m-bootstrap-select').selectpicker();
+            }
+
+            // switch
+            var switcher = function() {
+                var featured = $('input[id=featured]');
+                var featured_wrapper = $('#featured_wrapper');
+
+                featured.on('change', function() {
+                    if ($(this).prop('checked')) {
+                        featured_wrapper.addClass('m-switch--success');
+                        featured_wrapper.removeClass('m-switch--danger');
+                    } else {
+                        featured_wrapper.addClass('m-switch--danger');
+                        featured_wrapper.removeClass('m-switch--success');
+                    }
+                });
+            };
+
             // summernote
             var summernote = function () {
                 $('.summernote').summernote({
@@ -167,6 +244,7 @@
                     validator();
                     inputMasks();
                     select();
+                    switcher();
                     summernote();
                 }
             };
