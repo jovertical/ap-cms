@@ -69,6 +69,11 @@ Route::namespace('Front')->name('front.')->group(function () {
         Route::get('{reservation}/review', 'ReservationsController@review')->name('review');
     });
 
+    Route::prefix('reservations')->name('reservations.')->group(function() {
+        Route::get('/', 'ReservationsController@index')->name('index');
+        Route::get('{reservation}', 'ReservationsController@show')->name('show');
+    });
+
     Route::middleware('front.auth')->prefix('user')->group(function() {
         Route::get('/', 'DashboardController@index')->name('dashboard');
         Route::prefix('account')->name('account.')->group(function() {

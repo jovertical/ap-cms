@@ -43,6 +43,17 @@ class ReservationsController extends Controller
     }
 
     /**
+     * Display the listing of the resource.
+     * @return view
+     */
+    public function index()
+    {
+        $reservations = Reservation::where('user_id', auth()->user()->id)->paginate(1);
+
+        return view(user_env().'.reservations.index', compact('reservations'));
+    }
+
+    /**
      * Get the selected products.
      * @return array
      */
