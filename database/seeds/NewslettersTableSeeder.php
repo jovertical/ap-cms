@@ -12,7 +12,7 @@ class NewslettersTableSeeder extends Seeder
     public function run()
     {
         \App\Newsletter::create([
-            'trigger' => 'subscribed',
+            'trigger' => 'registered',
             'frequency' => null,
             'title' => 'Welcome to '.config('app.name'),
             'body' => 'Aurarich is expanding into the Philippines! Visit our Sell AuraRich page for details on how to register as an Independent Distributor or Reseller. 
