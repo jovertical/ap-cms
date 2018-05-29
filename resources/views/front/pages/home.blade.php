@@ -79,6 +79,7 @@
                                         <span class="content">{{ $category->name }}</span>
                                     </div>
                                 </div>
+                                <br>
                                 @endforeach
                             </div>
     
