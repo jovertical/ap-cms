@@ -111,7 +111,7 @@
                                         <i class="">/</i>
                                     </li>
                                     <li>
-                                        <a href="{{ route(user_env().'.deals') }}" title="Deals">Deals</a>
+                                        <a href="{{ route(user_env().'.deals.index') }}" title="Deals">Deals</a>
                                         <i class="">/</i>
                                     </li>
                                     <li>

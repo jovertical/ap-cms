@@ -60,6 +60,10 @@ select {
 	color: #848484;
 }
 
+.bred {
+    border: 1px solid red;
+}
+
 .p-5 { padding: 25px; }
 .p-4 { padding: 20px; }
 .p-3 { padding: 15px; }

@@ -84,7 +84,7 @@
                                             </a>
                                         </li>
                                          <li class="nav-item">
-                                        <a href="{{ route(user_env().'.deals') }}">
+                                        <a href="{{ route(user_env().'.deals.index') }}">
                                             <span>Deals</span>
                                         </a>
                                           </li>
@@ -364,7 +364,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route(user_env().'.deals') }}">
+                                    <a href="{{ route(user_env().'.deals.index') }}">
                                         <span>Deals</span>
                                     </a>
                                 </li>

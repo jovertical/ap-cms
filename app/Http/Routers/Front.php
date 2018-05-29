@@ -11,7 +11,6 @@ Route::namespace('Front')->name('front.')->group(function () {
     Route::get('/system', 'PagesController@system')->name('system');
     Route::get('/howitworks', 'PagesController@howitworks')->name('howitworks');
     Route::get('/distributorpromotion', 'PagesController@distributorpromotion')->name('distributorpromotion');
-    Route::get('/deals', 'PagesController@deals')->name('deals');
     Route::get('/news', 'PagesController@news')->name('news');
     Route::get('/reviews', 'PagesController@reviews')->name('reviews');
     Route::get('/location', 'PagesController@location')->name('location');
@@ -21,6 +20,11 @@ Route::namespace('Front')->name('front.')->group(function () {
     Route::prefix('products')->name('products.')->group(function() {
         Route::get('/', 'ProductsController@index')->name('index');
         Route::get('/{product}', 'ProductsController@show')->name('show');
+    });
+
+    Route::prefix('deals')->name('deals.')->group(function() {
+        Route::get('/', 'DealsController@index')->name('index');
+        Route::get('/{deal}', 'DealsController@show')->name('show');
     });
 
     Route::prefix('tutorials')->name('tutorials.')->group(function() {

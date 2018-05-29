@@ -71,7 +71,7 @@ class ProductsController extends Controller
 
 	public function datatables()
 	{
-        return DataTables::of(Product::get())
+        return DataTables::of(Product::where('type', 'product')->get())
             ->rawColumns(['description'])
             ->addColumn('category', function (Product $product) {
                 return optional($product->category)->toArray();

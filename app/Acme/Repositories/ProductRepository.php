@@ -7,10 +7,10 @@ use App\{Product};
 class ProductRepository
 {
 	public $products;
-	
+
 	public function __construct()
 	{
-		$this->products = Product::where('active', 1);
+		$this->products = Product::where('active', 1)->where('type', 'product');
 	}
 
 	public function get()
@@ -18,7 +18,7 @@ class ProductRepository
 		return $this->products->get();
 	}
 
-	public function filtered(array $filters = []) 
+	public function filtered(array $filters = [])
 	{
 		if (array_key_exists('c', $filters)) {
 			$this->products = $this->products->where('category_id', $filters['c']);
