@@ -24,7 +24,7 @@
                                         <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                     </a>
                                     <ul class="dropdown-menu">
- 
+
                                         <li class=" dropdown li-sub-mega">
                                             <a href="{{ route(user_env().'.sellaura') }}">
                                                 <span>Sell AuraRich</span>
@@ -65,7 +65,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                               
+
                                 <li class="nav-item dropdown navigation">
                                     <a href="{{ route(user_env().'.products.index') }}" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
                                         <span>Products</span>
@@ -74,7 +74,7 @@
                                         <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                       
+
                                         <li class=" dropdown li-sub-mega">
                                             <a href="{{ route(user_env().'.products.index') }}">
                                                 <span>Products</span>
@@ -95,7 +95,7 @@
                                                 <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                             </a>
                                         </li>
-                                         
+
                                     </ul>
                                 </li>
                                  <li class="nav-item">
@@ -103,8 +103,8 @@
                                         <span>Distributors</span>
                                     </a>
                                 </li>
-                               
-                               
+
+
                                 <li class="nav-item dropdown navigation">
                                     <a href="{{ route(user_env().'.about') }}" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
                                         <span>About Us</span>
@@ -113,7 +113,7 @@
                                         <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                       
+
                                         <li class=" dropdown li-sub-mega">
                                             <a href="{{ route(user_env().'.about') }}">
                                                 <span>About Us</span>
@@ -200,15 +200,22 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li class=" dropdown li-sub-mega">
+                                                <a href="{{ route(user_env().'.reservations.index') }}">
+                                                    <span>Reservations</span>
+                                                    <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                    <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class=" dropdown li-sub-mega">
                                                 <a href="{{ route(user_env().'.account.profile') }}">
-                                                    <span>My profile</span>
+                                                    <span>Profile</span>
                                                     <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
                                                     <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                                 </a>
                                             </li>
                                             <li class=" dropdown li-sub-mega">
                                                 <a href="{{ route(user_env().'.account.password') }}">
-                                                    <span>My password</span>
+                                                    <span>Password</span>
                                                     <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
                                                     <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                                 </a>
@@ -262,21 +269,28 @@
                                         @auth
                                             <ul class="customer dropdown-menu">
                                                 <li class=" dropdown li-sub-mega">
+                                                    <a href="{{ route(user_env().'.reservations.index') }}">
+                                                        <span>Reservations</span>
+                                                        <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                        <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                                    </a>
+                                                </li>
+                                                <li class=" dropdown li-sub-mega">
                                                     <a href="{{ route(user_env().'.account.profile') }}">
-                                                        <span>My profile</span>
+                                                        <span>Profile</span>
                                                         <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
                                                         <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                                     </a>
                                                 </li>
                                                 <li class=" dropdown li-sub-mega">
                                                     <a href="{{ route(user_env().'.account.password') }}">
-                                                        <span>My password</span>
+                                                        <span>Password</span>
                                                         <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
                                                         <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                                     </a>
                                                 </li>
                                                 <li class=" dropdown li-sub-mega">
-                                                    <a href="/logout">
+                                                    <a href="{{ route(user_env().'.logout') }}">
                                                         <span>Logout</span>
                                                         <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
                                                         <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
@@ -427,15 +441,22 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li class=" dropdown li-sub-mega">
+                                                <a href="{{ route(user_env().'.reservations.index') }}">
+                                                    <span>Reservations</span>
+                                                    <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
+                                                    <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class=" dropdown li-sub-mega">
                                                 <a href="{{ route(user_env().'.account.profile') }}">
-                                                    <span>My profile</span>
+                                                    <span>Profile</span>
                                                     <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
                                                     <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                                 </a>
                                             </li>
                                             <li class=" dropdown li-sub-mega">
                                                 <a href="{{ route(user_env().'.account.password') }}">
-                                                    <span>My password</span>
+                                                    <span>Password</span>
                                                     <i class="sub-dropdown1  visible-sm visible-md visible-lg"></i>
                                                     <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
                                                 </a>
